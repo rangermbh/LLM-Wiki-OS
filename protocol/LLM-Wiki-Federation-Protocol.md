@@ -50,7 +50,7 @@ Each Domain Wiki is a **complete, self-contained knowledge base** for one domain
 ## Knowledge Lifecycle
 
 ```
-RAW INPUT  →  PROCESSED  →  CURATED  →  ABSTRACTED
+RAW INPUT  →  INGESTED   →  CURATED    →  ABSTRACTED
 (capture/)    (domain/)     (domain/)    (master/)
 ```
 
@@ -60,12 +60,13 @@ RAW INPUT  →  PROCESSED  →  CURATED  →  ABSTRACTED
 - Immutable. Source of truth for what was captured.
 - Examples: web clips, PDFs, AI conversation exports, manual notes.
 
-### 2. Processing (Domain raw → wiki)
+### 2. Ingestion (Capture → Domain wiki)
 
 - Read raw captures, extract structured knowledge.
-- Create Domain wiki pages.
+- Create Domain wiki pages (status: seedling).
 - Link to existing pages.
 - Update Domain index and log.
+- Mark capture as processed.
 
 ### 3. Curation (Domain wiki maintenance)
 
@@ -75,6 +76,10 @@ RAW INPUT  →  PROCESSED  →  CURATED  →  ABSTRACTED
 - Archive superseded content.
 
 ### 4. Abstraction (Domain → Master)
+
+**Note**: The macro-stage INGESTED maps to the capture status `processed` and domain status `seedling`. CURATED maps to domain statuses `growing` and `evergreen`. ABSTRACTED maps to Master statuses `proposed`, `accepted`, and `active`. See `protocol/knowledge-lifecycle.md` for detailed stage definitions.
+
+### 4a. Promotion (Domain → Master)
 
 - When a pattern appears across 3+ Domain pages, propose a Master entry.
 - Human reviews and approves/rejects.

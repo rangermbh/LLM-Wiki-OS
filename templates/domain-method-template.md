@@ -5,6 +5,8 @@ domain: ""
 tags: []
 status: seedling
 sources: []
+captured_from: ""
+ingested_by: ""
 ---
 
 # Method Name

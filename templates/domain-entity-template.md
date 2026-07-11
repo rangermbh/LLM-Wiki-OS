@@ -6,6 +6,9 @@ type: entity
 entity_type: ""  # person, organization, project, event
 tags: []
 status: seedling
+sources: []
+captured_from: ""
+ingested_by: ""
 ---
 
 # Entity Name

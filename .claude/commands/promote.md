@@ -16,7 +16,11 @@ Analyze Domain Wiki content for cross-domain patterns and propose Master Wiki en
    b. Similar mental models applied in different contexts.
    c. Universal heuristics or rules of thumb.
 3. For each pattern:
-   a. Write a proposed Master page using `templates/master-model-template.md`.
+   a. Write a proposed Master page using the appropriate template:
+      - `templates/master-model-template.md` for mental models
+      - `templates/master-principle-template.md` for principles/heuristics
+      - `templates/master-concept-template.md` for cross-domain concepts
+      - `templates/master-framework-template.md` for personal frameworks
    b. Place it in `spaces/master/wiki/<appropriate-category>/`.
    c. Set frontmatter `status: proposed`.
    d. Link back to source Domain pages.

@@ -15,9 +15,13 @@ Review and refresh existing Domain Wiki pages to keep knowledge current.
    a. Read current content and frontmatter.
    b. Check linked sources for new information.
    c. Check for stale content (outdated facts, broken links).
-   d. Update `updated` date in frontmatter.
-   e. Add changes to domain `log.md`.
-3. Report changes made.
+   d. Evaluate page maturity against `protocol/knowledge-lifecycle.md` criteria:
+      - seedling → growing: all sections filled, ≥1 incoming link, source capture referenced
+      - growing → evergreen: requires human approval (do not auto-transition)
+      - If criteria for next status are met, update `status` and note the transition in the log.
+   e. Update `updated` date in frontmatter.
+   f. Add changes to domain `log.md`.
+3. Report changes made, including any status transitions.
 
 ## Limits
 

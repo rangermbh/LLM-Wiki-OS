@@ -9,6 +9,9 @@ year: ""
 url: ""
 tags: []
 status: seedling
+sources: []
+captured_from: ""
+ingested_by: ""
 ---
 
 # Reference Title

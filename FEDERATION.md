@@ -40,7 +40,8 @@ This is the **LLM Wiki Federation** — a personal knowledge operating system or
 | Edit Master pages | **Must approve** | Propose only |
 | Delete Master pages | **Must approve** | Propose only |
 | Modify architecture | **Must approve** | Propose only |
-| Modify capture files | **Forbidden** | **Forbidden** |
+| Modify capture raw content | **Forbidden** | **Forbidden** |
+| Modify capture frontmatter | Approve | Execute (status, dates, links only) |
 
 ### Decision Framework
 

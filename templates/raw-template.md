@@ -1,7 +1,7 @@
 ---
 created: YYYY-MM-DD
 source: ""
-type: ""
+source_type: ""  # web-clip, manual-note, pdf-export, ai-conversation, other
 tags: []
 status: raw
 ---
