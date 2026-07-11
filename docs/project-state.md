@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11
-updated: 2026-07-11
+updated: 2026-07-11T23:00:00+08:00
 status: active
 ---
 
@@ -165,3 +165,74 @@ Final cognitive authority. Responsibilities:
 Agent analyzes → Agent suggests → Agent prepares → Human decides.
 
 Agent never redefines the human's worldview automatically. When uncertain, the agent explains options, recommends an approach, and waits for approval.
+
+---
+
+## 8. Documentation Map（文档地图）
+
+完整的项目文档导航见：
+
+- [[docs/document-map|LLM Wiki OS 文档地图]]
+
+该文档为人类和 Agent 提供结构化的文档索引，涵盖入口文件、协议层、模板层、采集层、知识层、验证历史和维护原则。
+
+---
+
+## 9. Language Policy（语言策略）
+
+LLM Wiki OS 是双语系统（中英双语）。语言选择取决于内容所在层。
+
+### System Layer（系统层）
+
+**保持英文**。以下标识符不翻译：
+
+| 类别 | 示例 |
+|------|------|
+| 文件名 | `CLAUDE.md`, `project-state.md`, `ai-agent-memory.md` |
+| YAML keys | `status`, `source_type`, `captured_from`, `ingested_by`, `ingested_to` |
+| 元数据值 | `raw`, `processed`, `seedling`, `growing`, `evergreen` |
+| 命令 | `/ingest`, `/update`, `/lint`, `/promote`, `/reflect` |
+| 协议标识符 | `RAW INPUT`, `INGESTED`, `CURATED`, `ABSTRACTED` |
+| 知识类型 | `concepts`, `methods`, `technologies`, `references`, `entities` |
+| Master 类别 | `models`, `principles`, `concepts`, `frameworks` |
+| Git commit 类型 | `capture`, `update`, `reflect`, `promote`, `maintenance` |
+
+**原因**：这些标识符是机器可读的系统契约。翻译会破坏 Agent 解析、模板匹配和 Git 日志聚合。
+
+### Human Documentation Layer（人类文档层）
+
+**中文为主**，关键术语保留英文并附中文说明。
+
+示例格式：
+- Knowledge Lifecycle（知识生命周期）
+- Federation Protocol（联邦协议）
+- Capture Layer（采集层）
+- Domain Wiki（领域 Wiki）
+- Master Wiki（主 Wiki）
+
+**规则**：
+- 首次出现的重要术语使用 `English（中文）` 格式
+- 文件名和路径保留英文原文，不翻译
+- 技术概念的解释使用中文
+
+### Knowledge Layer（知识层）
+
+**中文说明为主**，保留标准英文技术术语。
+
+保留英文原词的技术术语示例：
+- AI Agent
+- RAG（Retrieval-Augmented Generation）
+- Vector Database
+- Embedding
+- Memory Architecture
+- Transformer
+- LLM（Large Language Model）
+- HNSW（Hierarchical Navigable Small World）
+- k-NN（k-Nearest Neighbors）
+- API
+
+**规则**：
+- 广为人知的英文缩写直接使用（RAG、LLM、API）
+- 较生僻的缩写首次出现时给出全称
+- Wiki 页面的 Definition（定义）部分应提供清晰的中文解释
+- 技术准确性优先于语言纯粹性——当英文术语比中文翻译更精确时，保留英文
