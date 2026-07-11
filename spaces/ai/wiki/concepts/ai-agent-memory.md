@@ -57,9 +57,18 @@ AI Agent Memory 的核心是一个四阶段管道：
 
 ## Relationships
 
+### Master Concepts
+
+本页面为以下 Master Concept 提供**领域证据**：
+
+- [[spaces/master/wiki/concepts/structured-minimal-unit-principle|结构化最小单元原则]] — 交互块（interaction chunk）作为记忆检索的基本单元，"分块决定了后续所有检索的粒度上限"。编码阶段的基本单元质量通过管道复合效应决定记忆系统的召回精度上限
+- [[spaces/master/wiki/concepts/emergent-structure-from-local-interactions|局部交互涌现全局结构]] — 记忆类型的自然分化（短期/长期/情景/语义/程序）并非预定义架构，而是从访问模式和持久化需求的局部差异中涌现。同构的检索管道应用于不同数据源产生了功能上的类型分化
+
+### Domain Connections
+
 - [[rag|RAG]] — RAG 与 Agent Memory 共享核心管道（编码→检索→增强→生成），但聚焦点不同：RAG 面向外部知识库，Agent Memory 面向交互历史。二者的检索+整合机制是同构的，可以理解为同一架构模式在知识维度和记忆维度的两种特化
-- Vector Embeddings — 向量嵌入是编码阶段的核心技术，决定了语义搜索的质量上限（page planned）
-- Transformer Architecture — Transformer 是管道两端的计算基础：嵌入模型基于 Transformer 编码器，推理端基于 Transformer 解码器（page planned）
+- [[vector-embeddings|Vector Embeddings]] — 向量嵌入是编码阶段的核心技术，决定了语义搜索的质量上限。RAG 和 Agent Memory 共享同一套编码→检索架构，嵌入层是两者的共同基础设施
+- [[transformer-architecture|Transformer Architecture]] — Transformer 是管道两端的计算基础：嵌入模型基于 Transformer 编码器，推理端基于 Transformer 解码器。自注意力机制使记忆检索和上下文整合能够捕捉长距离语义依赖
 - LangChain / LlamaIndex — 提供上述管道各阶段的框架级抽象和实现（pages planned）
 
 ## Applications
@@ -87,5 +96,4 @@ AI Agent Memory 的核心是一个四阶段管道：
 - 本页面于 2026-07-12 按 knowledge-distillation.md v1.0.0 标准从文章摘要风格迁移为知识概念风格
 - 原始采集为英文商业博客，迁移后以中文撰写，保留 AI Agent Memory、RAG、LLM、HNSW、IVF、k-NN 等标准英文技术术语
 - 剥离了原文中的 Redis 产品促销内容（CTA 按钮、免费试用链接、产品对比话术），将通用技术原理从厂商特定实现中分离
-- TODO: 创建 Vector Embeddings、Transformer Architecture 概念页面
 - TODO: 创建 LangChain、LlamaIndex 技术页面

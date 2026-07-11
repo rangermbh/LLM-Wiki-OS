@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11
-updated: 2026-07-12
+updated: 2026-07-12T23:59
 status: active
 ---
 
@@ -89,7 +89,7 @@ These decisions are settled. Do not reopen without explicit human request.
 | Templates | 10 templates (1 raw + 5 domain + 4 master) |
 | Commands | 5 commands (ingest, update, lint, promote, reflect) |
 | Domains | 2 domains (AI, Knowledge Management) |
-| Master Wiki | 4 categories, schema, index, log |
+| Master Wiki | 4 categories, schema, index, 2 concepts (activated) |
 | Obsidian integration | Vault configured, 14 core plugins enabled, wikilinks, frontmatter |
 | .gitignore | Obsidian workspace, OS files, temp files excluded |
 | .gitkeep files | 21 files protecting empty directories |
@@ -98,29 +98,43 @@ These decisions are settled. Do not reopen without explicit human request.
 
 | Component | Detail |
 |-----------|--------|
-| Ingestion governance | Protocol docs created, `/ingest` updated with Distillation stage. Knowledge distillation protocol defines Article Summary vs Knowledge Concept distinction. |
+| — | 无进行中项目。S06 已完成，等待 S07 方向确定。 |
+
+### Completed Since Last Update
+
+| Component | Detail |
+|-----------|--------|
+| S06 System Stabilization | Schema drift 修复（AI + KM）、12 条 Domain→Master backlinks、Master Wiki Governance 创建、首次结构 lint（0 broken links, 0 orphans）、document-map 同步 |
+| S05 Reflect Report | `/reflect` 执行：6 项发现（3 medium, 3 low），系统健康确认，S06 readiness 验证 |
 
 ### Not Yet Started
 
 | Component | Detail |
 |-----------|--------|
-| First real knowledge ingestion | 2 captures processed, 2 concept pages created (ai-agent-memory, rag) |
-| Health check automation | `/lint` and `/reflect` never run against content |
-| Cross-domain promotion | `/promote` never executed (needs content in 2+ domains first) |
+| S07 Knowledge Expansion | 方向待 Human 确定：KM Domain Growth / AI Domain Deferred Activation / Third Domain |
+| Health check automation | 首次 lint 已手动执行；自动化 lint 触发规则尚未建立 |
 
 ---
 
 ## 5. Current Phase
 
-**Phase**: Knowledge Activation (2 concepts created)
+**Phase**: S06 Knowledge System Stabilization & Governance Baseline — Completed. S07 direction pending.
 
-The architecture is complete. Knowledge is flowing through the pipeline. Next steps:
+AI Domain: Phase 1 Frozen (4 concepts). KM Domain: Activated (2 concepts). Master Wiki: Activated (2 concepts + governance).
 
-1. ~~Create first capture in `capture/inbox/`~~ ✓
-2. ~~Run `/ingest` end-to-end~~ ✓
-3. ~~Populate both domains with initial wiki pages~~ ✓ (AI: 2 concepts)
-4. Run `/lint` on real content
-5. Detect first cross-domain pattern → `/promote`
+Domain→Master backlink 网络完整（12 条双向链路）。Master Wiki 治理框架已建立。首次结构 lint 通过（0 broken links, 0 orphans）。
+
+Next milestone: S07 direction (待 Human 确定)。
+
+Phase 演进：
+1. ~~Architecture Building~~ ✓ (2026-07-11)
+2. ~~Knowledge Activation~~ ✓ (2026-07-11, first ingest)
+3. ~~Knowledge Quality Improvement~~ ✓ (2026-07-12, distillation layer + language policy)
+4. ~~Knowledge Scaling~~ ✓ (2026-07-12, AI Domain v2 + KM Domain bootstrap)
+5. ~~KM Domain Expansion~~ ✓ (2026-07-12, Zettelkasten Method + taxonomy stabilization)
+6. ~~Cross-Domain Abstraction~~ ✓ (2026-07-12, /promote × 2 + Master Wiki Construction)
+7. ~~Knowledge System Stabilization~~ ✓ (2026-07-12, schema drift fix + backlinks + governance + first lint)
+8. **S07: (未定义)** ← 当前过渡点
 
 ---
 

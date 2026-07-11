@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11
-updated: 2026-07-12
+updated: 2026-07-12T23:59
 status: active
 ---
 
@@ -48,6 +48,7 @@ status: active
 | `protocol/metadata-schema.md` | 元数据规范：所有页面类型的 YAML frontmatter 字段定义、允许值和约束 |
 | `protocol/domain-routing.md` | 领域路由规则：如何将 capture 分配到正确的 Domain Wiki |
 | `protocol/knowledge-lifecycle.md` | 知识生命周期：微观状态转换（raw → processed → seedling → growing → evergreen → proposed → accepted → active）及每个状态的准入/退出标准 |
+| `protocol/knowledge-linking.md` | 知识链接协议：wikilink 治理规则——完整路径 vs 短名称、裸链接禁止、planned reference 标记、孤儿页面检查 |
 | `protocol/knowledge-distillation.md` | 知识蒸馏协议：文章摘要 vs 知识概念的区别、Concept Page 必需结构（Definition/Core Idea/Mechanism/Relationships/Applications/Limitations）、蒸馏规则和质量检查清单 |
 | `protocol/knowledge-flow.md` | 知识流动协议：知识在 Federation 各层之间的完整流动路径（采集 → 摄取 → 策展 → 抽象 → 整合）、命令作为流动操作符、决策点与权限边界、质量门、反馈回路 |
 | `protocol/Git-Commit-Convention.md` | Git 提交规范：5 种 commit 类型（capture / update / reflect / promote / maintenance）及其语义 |
@@ -113,32 +114,78 @@ capture/
 
 知识层是系统生成和维护的知识结构，位于 `spaces/` 目录。
 
+### 目录结构
+
 ```
 spaces/
 ├── master/                       # Master Wiki：跨域个人世界模型
 │   └── wiki/
 │       ├── models/               # 心智模型
 │       ├── principles/           # 原则/启发式规则
-│       ├── concepts/             # 跨域概念
+│       ├── concepts/             # 跨域概念（2 pages）
 │       └── frameworks/           # 个人框架
 ├── ai/                           # AI 领域 Wiki
 │   ├── schema.md                 # 领域结构定义
 │   ├── index.md                  # 领域知识索引
 │   ├── log.md                    # 领域操作日志
 │   └── wiki/
-│       ├── concepts/             # AI 概念
+│       ├── concepts/             # AI 概念（4 pages）
 │       ├── methods/              # AI 方法
 │       ├── technologies/         # AI 技术
 │       ├── references/           # AI 参考文献
 │       └── entities/             # AI 实体（人物/组织/项目）
 ├── knowledge-management/         # 知识管理领域 Wiki
-│   └── ...（结构同 AI 领域）
+│   ├── schema.md                 # 领域结构定义
+│   ├── index.md                  # 领域知识索引
+│   ├── log.md                    # 领域操作日志
+│   └── wiki/
+│       ├── concepts/             # 知识管理概念（2 pages）
+│       ├── methods/              # 知识管理方法
+│       ├── technologies/         # 知识管理工具
+│       ├── references/           # 知识管理参考文献
+│       └── entities/             # 知识管理实体（人物/社区）
 └── (future domains...)           # 未来可扩展更多领域
 ```
 
-每个领域自包含：有自己的 schema、index、log 和 5 种知识类型的 wiki 子目录。
+### Master Wiki（Activated · 2 concepts · 1 governance）
 
-Master Wiki **不是**知识索引——它只存储跨领域抽象。
+Master Wiki 已激活，首批跨领域概念从 AI Domain (4 concepts) + KM Domain (2 concepts) 的第二次 `/promote` 评估中创建。
+
+| 页面 | 说明 |
+|------|------|
+| [[spaces/master/wiki/concepts/structured-minimal-unit-principle\|结构化最小单元原则]] | 系统能力上限由基本单元质量定义。跨 AI（token/chunk/interaction block）和 KM（原子笔记/Zettel）独立验证 |
+| [[spaces/master/wiki/concepts/emergent-structure-from-local-interactions\|局部交互涌现全局结构]] | 全局结构从单元间局部配对交互中涌现，无需中心控制。依赖结构化最小单元原则作为前置条件 |
+| [[spaces/master/governance.md\|Master Wiki Governance]] | Master Wiki 治理文件：生命周期、promotion criteria、概念结构要求。固化 S05 已验证规则 |
+
+**拓扑**：`结构化最小单元原则 → 局部交互涌现全局结构`
+
+### AI Domain（Phase 1 Frozen · 4 concepts）
+
+AI Domain 已达到 Phase 1 稳定状态，进入 maintenance / expansion-ready 模式。Pull-based growth rule 已生效。
+
+| 页面 | 层 | 说明 |
+|------|-----|------|
+| [[spaces/ai/wiki/concepts/transformer-architecture\|Transformer Architecture]] | 架构基础层 | 自注意力机制神经网络架构，现代 LLM 和嵌入模型的计算基础 |
+| [[spaces/ai/wiki/concepts/vector-embeddings\|Vector Embeddings]] | 语义表示层 | 稠密向量语义映射，将离散实体编码为连续向量空间中的位置 |
+| [[spaces/ai/wiki/concepts/rag\|RAG]] | 应用管道层 | 外部知识检索增强生成，四阶段管道：编码→检索→增强→生成 |
+| [[spaces/ai/wiki/concepts/ai-agent-memory\|AI Agent Memory]] | 应用管道层 | Agent 记忆基础设施，使无状态 LLM 具备跨会话状态保持能力 |
+
+**拓扑**：`Transformer → Vector Embeddings → (RAG ∥ Agent Memory)`
+
+### KM Domain（Activated · 2 concepts）
+
+KM Domain 已激活，Principle → Method 推导链已建立。
+
+| 页面 | 类型 | 说明 |
+|------|------|------|
+| [[spaces/knowledge-management/wiki/concepts/note-atomicity\|Note Atomicity]] | Principle | 笔记原子性：每条笔记一个独立概念，KM Domain 首个锚点概念 |
+| [[spaces/knowledge-management/wiki/concepts/zettelkasten-method\|Zettelkasten Method]] | Method | 卡片盒方法：以原子笔记为单元、通过密集链接和序列编号构建知识网络 |
+
+**拓扑**：`Note Atomicity (Principle) → Zettelkasten Method (Method)`
+
+每条领域自包含：有自己的 schema、index、log 和 5 种知识类型的 wiki 子目录。
+
+Master Wiki 不是知识索引——它只存储跨领域抽象。
 
 ---
 
@@ -209,8 +256,13 @@ Master Wiki **不是**知识索引——它只存储跨领域抽象。
 | 查看知识生命周期 | `protocol/knowledge-lifecycle.md` |
 | 查看知识流动路径 | `protocol/knowledge-flow.md` |
 | 查看元数据字段定义 | `protocol/metadata-schema.md` |
+| 查看知识蒸馏标准 | `protocol/knowledge-distillation.md` |
+| 查看链接治理规则 | `protocol/knowledge-linking.md` |
 | 创建新 wiki 页面 | `templates/` （选择对应模板） |
+| 查看 AI Domain 知识网络 | `spaces/ai/index.md` |
+| 查看 KM Domain 知识 | `spaces/knowledge-management/index.md` |
 | 查看系统健康报告 | `reports/` |
 | 查看集成审计 | `docs/SYSTEM_INTEGRATION_AUDIT.md`、`docs/POST_FIX_VALIDATION.md` |
+| 查看验证历史与待决问题 | `docs/session-snapshot.md` |
 | 了解当前项目状态和阶段 | `docs/project-state.md` |
 | 了解语言使用策略 | `docs/language-policy.md` |
