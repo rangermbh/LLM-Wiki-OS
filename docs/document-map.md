@@ -44,6 +44,7 @@ status: active
 | `protocol/metadata-schema.md` | 元数据规范：所有页面类型的 YAML frontmatter 字段定义、允许值和约束 |
 | `protocol/domain-routing.md` | 领域路由规则：如何将 capture 分配到正确的 Domain Wiki |
 | `protocol/knowledge-lifecycle.md` | 知识生命周期：微观状态转换（raw → processed → seedling → growing → evergreen → proposed → accepted → active）及每个状态的准入/退出标准 |
+| `protocol/knowledge-flow.md` | 知识流动协议：知识在 Federation 各层之间的完整流动路径（采集 → 摄取 → 策展 → 抽象 → 整合）、命令作为流动操作符、决策点与权限边界、质量门、反馈回路 |
 | `protocol/Git-Commit-Convention.md` | Git 提交规范：5 种 commit 类型（capture / update / reflect / promote / maintenance）及其语义 |
 
 协议文件定义了**系统规则**——修改协议即改变系统行为，需要人类批准。
@@ -201,6 +202,7 @@ Master Wiki **不是**知识索引——它只存储跨领域抽象。
 | 了解 Agent 行为规则 | `CLAUDE.md` |
 | 恢复项目上下文 | `docs/project-state.md` |
 | 查看知识生命周期 | `protocol/knowledge-lifecycle.md` |
+| 查看知识流动路径 | `protocol/knowledge-flow.md` |
 | 查看元数据字段定义 | `protocol/metadata-schema.md` |
 | 创建新 wiki 页面 | `templates/` （选择对应模板） |
 | 查看系统健康报告 | `reports/` |

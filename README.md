@@ -4,79 +4,97 @@ A personal knowledge operating system powered by Obsidian, Claude Code, and Git.
 
 ## What Is This?
 
-LLM Wiki OS is a **federated personal wiki** designed for long-term knowledge management. Unlike traditional wikis that grow into unmaintainable monoliths, this system separates knowledge into three layers:
+LLM Wiki OS is a **personal knowledge operating system** that combines human curation with AI agent maintenance. It organizes knowledge into a federated architecture where information flows from raw capture to structured wiki pages, and eventually to cross-domain mental models.
 
-| Layer | Location | Purpose |
-|-------|----------|---------|
-| **Capture** | `capture/` | Raw, unprocessed external inputs |
-| **Domain** | `spaces/*/` | Curated domain-specific knowledge |
-| **Master** | `spaces/master/` | Cross-domain models, principles, concepts |
+## Core Philosophy
 
-## How It Works
+**Knowledge Federation.** Knowledge lives in semi-autonomous domains, not a single monolithic wiki. Each domain is self-contained. Cross-domain patterns are promoted to a Master Wiki — but only when they prove useful across contexts.
 
-### For You (Human)
+**Human + Agent Collaboration.** You capture and curate. The agent ingests, maintains, and discovers. The human always holds final authority — the agent proposes, never decides unilaterally.
 
-1. **Capture** — Save anything into `capture/inbox/`. Web clips, notes, PDFs, AI conversations. Don't filter.
-2. **Review** — The Maintainer Agent processes captures into structured Domain Wiki pages and notifies you.
-3. **Curate** — Review, edit, and approve wiki pages in your Domain spaces.
-4. **Abstract** — When patterns emerge across domains, the Agent proposes Master Wiki entries. You decide what gets promoted.
+**Knowledge Lifecycle Management.** Every piece of knowledge follows a defined lifecycle: `raw → processed → seedling → growing → evergreen`. Master entries go through `proposed → accepted → active`. Each transition has explicit criteria and authority boundaries.
 
-### For Claude Code (Maintainer Agent)
+## Architecture
 
-Claude Code acts as your **Wiki Maintainer**, handling:
+```
+External Inputs (Web, books, conversations...)
+        │
+        ▼
+┌───────────────────┐
+│   Capture Layer   │  ← Raw, immutable records
+│   capture/inbox/  │
+└───────┬───────────┘
+        │ /ingest
+        ▼
+┌───────────────────┐
+│   Domain Wiki     │  ← Curated domain knowledge
+│   spaces/{domain}/ │    seedling → growing → evergreen
+└───────┬───────────┘
+        │ /promote
+        ▼
+┌───────────────────┐
+│   Master Wiki     │  ← Cross-domain models & principles
+│   spaces/master/  │    Human-controlled
+└───────────────────┘
+```
 
-- **Ingestion** (`/ingest`) — Process raw captures into Domain Wiki pages
-- **Updates** (`/update`) — Refresh and maintain existing content
-- **Quality** (`/lint`) — Check for broken links, orphans, staleness
-- **Promotion** (`/promote`) — Propose cross-domain patterns for Master Wiki
-- **Reflection** (`/reflect`) — Periodic system health reviews
+- **Capture Layer** — Temporary landing zone for all incoming information. Raw content is never modified.
+- **Domain Wiki** — Structured knowledge organized by domain (AI, Knowledge Management, ...). Each domain has 5 knowledge types: concepts, methods, technologies, references, entities.
+- **Master Wiki** — Cross-domain abstractions: mental models, principles, concepts, and personal frameworks. Human-edited only.
 
-All agent rules are defined in `CLAUDE.md`.
+## Current Features
 
-## Repository Structure
+- **Web Clipper Capture** — Save web content directly into `capture/inbox/` via Obsidian Web Clipper
+- **Ingestion Pipeline** — `/ingest` routes captures to the correct domain, selects templates, and creates structured wiki pages
+- **Domain Routing** — Automatic domain assignment with boundary zone handling for ambiguous topics
+- **Metadata Governance** — Standardized YAML frontmatter across all pages with defined validation rules
+- **Knowledge Linking** — Governed wikilinks with explicit paths, preventing Obsidian root-level orphan files
+- **Knowledge Flow Management** — Complete traceability from external source to Master Wiki, with quality gates at each transition
+
+## Project Structure
 
 ```
 .
-├── CLAUDE.md              # Agent behavior rules
-├── README.md              # This file
-├── capture/               # Raw inputs (immutable)
-│   ├── inbox/
-│   └── attachments/
-├── spaces/                # Knowledge domains
-│   ├── master/            # Cross-domain models & principles
-│   │   └── wiki/
-│   │       ├── models/
-│   │       ├── principles/
-│   │       └── concepts/
-│   └── ai/                # Example domain
-│       ├── schema.md
-│       ├── index.md
-│       ├── log.md
-│       ├── raw/
-│       ├── wiki/
-│       └── sources/
-├── protocol/              # Federation protocol spec
-├── templates/             # Page templates
-├── .claude/commands/      # Maintainer command definitions
-├── reports/               # Lint and reflection reports
-└── archive/               # Superseded content
+├── CLAUDE.md                  # Agent Operating Constitution
+├── FEDERATION.md              # Federation members, authority model, signals
+├── capture/inbox/             # Raw capture files (immutable content)
+├── spaces/
+│   ├── master/wiki/           # Cross-domain world model
+│   ├── ai/wiki/               # AI domain knowledge
+│   └── knowledge-management/  # Knowledge Management domain
+├── protocol/                  # Federation protocol documents (6)
+├── templates/                 # Page templates (raw, domain × 5, master × 4)
+├── .claude/commands/          # Agent command definitions
+├── docs/                      # Documentation and audit reports
+├── reports/                   # Health check reports
+└── archive/                   # Superseded content
 ```
 
-## Getting Started
+## Quick Start
 
 ### Prerequisites
 
-- [Obsidian](https://obsidian.md) — Open this repository as an Obsidian vault
-- [Claude Code](https://claude.ai/code) — The Maintainer Agent
-- Git — Version history
+- [Obsidian](https://obsidian.md) with community plugins enabled
+- [Claude Code](https://claude.ai/code)
+- Git
 
 ### Setup
 
-1. Clone this repository
-2. Open the folder in Obsidian
-3. Use Claude Code in this directory — the agent reads `CLAUDE.md` automatically
-4. Start capturing: drop files into `capture/inbox/`
-5. Run `/ingest` to process your first captures
+1. **Clone** this repository and open it as an Obsidian vault
+2. **Configure plugins** — Enable community plugins in Obsidian settings (Web Clipper template: `.obsidian/templates/llm-wiki-capture.md`)
+3. **Start capturing** — Use the Web Clipper or drop files into `capture/inbox/`
+4. **Run ingestion** — In Claude Code, run `/ingest` to process captures into structured Domain Wiki pages
+5. **Review** — Check the generated pages in Obsidian. Edit, link, and refine
+
+### Maintenance Commands
+
+| Command | Purpose |
+|---------|---------|
+| `/ingest` | Process raw captures into Domain Wiki pages |
+| `/update` | Review and refresh existing wiki pages |
+| `/lint` | Run quality checks (broken links, orphans, staleness) |
+| `/promote` | Propose cross-domain patterns for Master Wiki |
+| `/reflect` | Weekly system health review |
 
 ## Design Principles
 
@@ -84,4 +102,4 @@ All agent rules are defined in `CLAUDE.md`.
 - **Master is earned** — Only cross-domain patterns reach Master Wiki
 - **Federation over monolith** — Each domain is self-contained
 - **Human in the loop** — The agent suggests, the human decides
-- **Git as backbone** — Every change is versioned
+- **Git as backbone** — Every knowledge change is versioned

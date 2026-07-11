@@ -53,7 +53,7 @@ This is the **LLM Wiki Federation** — a personal knowledge operating system or
 
 | Signal | Response |
 |--------|----------|
-| 3+ domains share a pattern | Propose Master model/principle |
+| 3+ pages across 2+ domains share a pattern | Propose Master model/principle |
 | Domain page contradicts Master | Flag for human review |
 | Domain page stale >6 months | Suggest review |
 | Capture inbox has new items | Offer to process |
