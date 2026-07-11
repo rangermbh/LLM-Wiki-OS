@@ -25,6 +25,7 @@ This is the **LLM Wiki Federation** — a personal knowledge operating system or
 | Domain | Path | Status | Scope |
 |--------|------|--------|-------|
 | AI | `spaces/ai/` | active | Artificial Intelligence, ML, DL, NLP, LLMs, AI Safety |
+| Knowledge Management | `spaces/knowledge-management/` | active | PKM, Obsidian workflows, LLM-assisted knowledge, information organization |
 
 ## Governance
 
