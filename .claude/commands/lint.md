@@ -19,11 +19,15 @@ Run quality checks on the wiki to detect issues.
 2. Scan Master Wiki for:
    a. Pages without source domain links.
    b. Pages that duplicate Domain content (too specific).
-3. Generate a lint report with findings categorized by severity:
+3. Scan Federation for:
+   a. **Domain pollution**: Master-level abstractions incorrectly stored in Domain wikis.
+   b. **Master overgrowth**: Domain-specific facts incorrectly stored in Master Wiki.
+   c. **Missing relationships**: Cross-domain patterns that are not linked between domains.
+4. Generate a lint report with findings categorized by severity:
    - **ERROR**: Broken links, duplicate pages.
    - **WARN**: Stale pages, missing metadata.
    - **INFO**: Orphan pages, suggested improvements.
-4. Write report to `reports/lint-<date>.md`.
+5. Write report to `reports/lint-<date>.md`.
 
 ## Limits
 

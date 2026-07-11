@@ -22,3 +22,9 @@ updated: 2026-07-11
 <!-- Abstract ideas bridging domains. See wiki/concepts/ -->
 
 *No entries yet.*
+
+## Frameworks
+
+<!-- Personal decision-making and analysis frameworks. See wiki/frameworks/ -->
+
+*No entries yet.*

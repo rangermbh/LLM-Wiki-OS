@@ -7,24 +7,36 @@ updated: 2026-07-11
 
 ## Concepts
 
-<!-- Core AI concepts. See wiki/ -->
+<!-- Core AI concepts. See wiki/concepts/ -->
 
 *No entries yet.*
 
 ## Methods
 
-<!-- Techniques, algorithms, approaches. -->
+<!-- Techniques, algorithms, procedures. See wiki/methods/ -->
 
 *No entries yet.*
 
-## Tools
+## Technologies
 
-<!-- Software, frameworks, infrastructure. -->
+<!-- Tools, frameworks, infrastructure. See wiki/technologies/ -->
+
+*No entries yet.*
+
+## References
+
+<!-- Papers, articles, books. See wiki/references/ -->
+
+*No entries yet.*
+
+## Entities
+
+<!-- People, organizations, projects. See wiki/entities/ -->
 
 *No entries yet.*
 
 ## Sources
 
-<!-- Key references. See sources/ -->
+<!-- External reference materials. See sources/ -->
 
 *No entries yet.*

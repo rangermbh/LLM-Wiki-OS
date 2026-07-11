@@ -15,6 +15,7 @@ The Master Wiki stores **cross-domain abstractions**: personal cognitive models,
 - **Models**: Personal mental models validated across multiple domains
 - **Principles**: Long-term heuristics and decision rules
 - **Concepts**: Abstract ideas that bridge domains
+- **Frameworks**: Personal decision-making and analysis frameworks
 
 ## What Does NOT Belong Here
 
@@ -29,7 +30,8 @@ The Master Wiki stores **cross-domain abstractions**: personal cognitive models,
 wiki/
 ├── models/       # Mental models (e.g., "Compression as Understanding")
 ├── principles/   # Decision heuristics (e.g., "Prefer Simplicity")
-└── concepts/     # Abstract bridging ideas (e.g., "Emergence")
+├── concepts/     # Abstract bridging ideas (e.g., "Emergence")
+└── frameworks/   # Personal frameworks (e.g., "Decision Matrix")
 ```
 
 ## Page Lifecycle
