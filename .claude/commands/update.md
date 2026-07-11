@@ -20,12 +20,17 @@ Review and refresh existing Domain Wiki pages to keep knowledge current.
       - Flag any bare links (e.g., `[[Concept]]` without path) for correction.
       - Flag any unresolved links that point to non-existent pages.
       - Fix format issues: bare links → explicit path links.
-   e. Evaluate page maturity against `protocol/knowledge-lifecycle.md` criteria:
+   e. Evaluate knowledge quality against `protocol/knowledge-distillation.md`:
+      - Check whether the page structure follows Article Summary patterns (source article order, marketing language, missing Limitations).
+      - Check whether required sections (Definition, Core Idea, Mechanism, Relationships, Applications, Limitations) are present and substantive.
+      - If the page predates the distillation standard and shows Article Summary characteristics, note it in the report as a migration candidate.
+      - Do NOT auto-rewrite pages. Flag them for human decision.
+   f. Evaluate page maturity against `protocol/knowledge-lifecycle.md` criteria:
       - seedling → growing: all sections filled, ≥1 incoming link, source capture referenced
       - growing → evergreen: requires human approval (do not auto-transition)
       - If criteria for next status are met, update `status` and note the transition in the log.
-   f. Update `updated` date in frontmatter.
-   g. Add changes to domain `log.md`.
+   g. Update `updated` date in frontmatter.
+   h. Add changes to domain `log.md`.
 3. Report changes made, including any status transitions.
 
 ## Limits
@@ -33,4 +38,4 @@ Review and refresh existing Domain Wiki pages to keep knowledge current.
 - Do NOT update Master Wiki pages — only suggest.
 - Do NOT change the core meaning of a page without human approval.
 - If a page needs major revision, create a new page and suggest archiving the old one.
-- Keep the original author's voice where possible.
+- Preserve factual attribution, source traceability, and original ideas. Do NOT preserve source article narrative style, marketing language, promotional wording, or article structure. The Wiki should use the knowledge system's own explanatory language (see `protocol/knowledge-distillation.md`).

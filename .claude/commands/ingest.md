@@ -16,6 +16,12 @@ Process raw items in `capture/inbox/` and extract structured knowledge into the 
 
 ## Execution Steps
 
+### Flow
+
+```
+Capture → Routing → Distillation → Concept Creation
+```
+
 ### Step 1: List captures
 List all files in `capture/inbox/` with `status: raw`. Skip files already marked `status: processed`.
 
@@ -53,7 +59,25 @@ Before creating a new page, search the target Domain's `wiki/` directory for:
 
 Prefer updating existing pages over creating new ones (CLAUDE.md Domain Wiki Rules).
 
-#### e. Resolve wikilinks
+#### e. Distill knowledge
+Apply Knowledge Distillation following `protocol/knowledge-distillation.md`:
+
+1. **Identify the concept**: What is the ONE concept this capture is about?
+2. **Extract core mechanism**: Internal logic, architecture, process. How does it work?
+3. **Identify relationships**: What existing wiki concepts does this connect to?
+4. **Identify boundaries**: What does this concept NOT explain? Where does it break down?
+5. **Synthesize**: Write the Concept Page as the knowledge system's **understanding** of the concept — not as a summary of the source article.
+
+Before proceeding to create the page, verify the quality checklist:
+- [ ] Definition situates the concept in the domain (one sentence)
+- [ ] Core Idea can be understood without reading the source
+- [ ] Mechanism is specific enough to distinguish from adjacent concepts
+- [ ] Relationships explain connection types, not just list names
+- [ ] Limitations section will be present and substantive
+- [ ] No marketing language or vendor enthusiasm
+- [ ] Page structure does not follow source article structure
+
+#### f. Resolve wikilinks
 Before writing the wiki page, resolve all wikilinks following `protocol/knowledge-linking.md`:
 
 1. For each concept referenced in the page content, search existing wiki pages across all domains.
@@ -61,13 +85,13 @@ Before writing the wiki page, resolve all wikilinks following `protocol/knowledg
 3. For same-domain same-type links, use relative paths (e.g., `[[target|Display]]`).
 4. For cross-domain links, use full paths from the vault root.
 5. If a target concept does not exist yet, do NOT create a bare link. Instead:
-   - When creating the page in step f, add a TODO note in its Notes section (e.g., `TODO: future link to [[spaces/ai/wiki/concepts/rag|RAG]]`).
+   - When creating the page in step g, add a TODO note in its Notes section (e.g., `TODO: future link to [[spaces/ai/wiki/concepts/rag|RAG]]`).
    - Optionally add a `<!-- planned: [[path|Concept]] -->` comment in the domain index.
 6. Verify every `[[link]]` resolves to an existing file or is intentionally documented as planned.
 
 Bare wikilinks (e.g., `[[RAG]]`) create orphan files in the Vault root and are forbidden.
 
-#### f. Create wiki page
+#### g. Create wiki page
 1. Copy the selected template.
 2. Fill in frontmatter:
    - `created`: today's date
@@ -78,12 +102,12 @@ Bare wikilinks (e.g., `[[RAG]]`) create orphan files in the Vault root and are f
    - `sources`: wikilink to the capture file
    - `captured_from`: relative path to `capture/inbox/<filename>.md`
    - `ingested_by`: `claude-opus-4.7`
-3. Fill in content sections based on the capture's raw content.
+3. Fill in content sections based on the distilled understanding from step 2e. The raw capture is the evidence source; the distillation results are the knowledge structure source. Do not copy the source article's narrative structure or phrasing.
 4. Replace all `<!-- comment -->` placeholders with actual content or remove them.
 5. Save to `spaces/<domain>/wiki/<type>/<page-name>.md`.
 6. Use `kebab-case` for page filenames.
 
-#### g. Update Domain index
+#### h. Update Domain index
 Add the new page to the appropriate section in `<domain>/index.md`:
 - Concepts → Concepts section
 - Methods → Methods section
@@ -93,7 +117,7 @@ Add the new page to the appropriate section in `<domain>/index.md`:
 
 Format: `- [[wiki/<type>/<page-name>|Page Title]] — Brief description.`
 
-#### h. Update Domain log
+#### i. Update Domain log
 Add an entry to `<domain>/log.md`:
 ```
 | YYYY-MM-DD | ingest | Routed "capture-filename" → wiki/<type>/<page-name>. Domain: <domain>. Type: <content-type>. |
@@ -138,5 +162,6 @@ Output a summary:
 - `protocol/domain-routing.md` — Domain selection and content type rules
 - `protocol/knowledge-lifecycle.md` — Status definitions and transitions
 - `protocol/knowledge-linking.md` — Wiki link format and resolution rules
+- `protocol/knowledge-distillation.md` — Article summary vs knowledge concept distinction, distillation rules, quality checklist
 - `FEDERATION.md` — Registered domains and their scopes
 - `CLAUDE.md` — Operating Constitution (Raw Rules, Domain Wiki Rules)

@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11
-updated: 2026-07-11
+updated: 2026-07-12
 status: active
 ---
 
@@ -24,13 +24,17 @@ status: active
 
 ---
 
-## 2. 项目状态（Project State）
+## 2. 项目状态与治理（Project State & Governance）
 
 | 文件 | 用途 |
 |------|------|
 | `docs/project-state.md` | 当前系统快照和上下文恢复入口 |
+| `docs/language-policy.md` | 语言策略 v1.0：中英双语治理、知识意义层与语言表达层分离、双仓库社区策略 |
+| `docs/session-snapshot.md` | 会话快照：当前讨论上下文、待决问题、验证结论，用于跨会话快速恢复 |
 
 `project-state.md` 记录了项目的完整运行时状态：架构设计、设计决策（D1-D8）、实现进度、当前阶段、Git 历史和运维原则。它是会话恢复的**首要读取文件**——Agent 在新会话中应首先读取此文件以恢复上下文。
+
+`language-policy.md` 是项目语言使用的**权威定义**，取代此前散落在各文件中的语言相关描述。
 
 ---
 
@@ -44,6 +48,7 @@ status: active
 | `protocol/metadata-schema.md` | 元数据规范：所有页面类型的 YAML frontmatter 字段定义、允许值和约束 |
 | `protocol/domain-routing.md` | 领域路由规则：如何将 capture 分配到正确的 Domain Wiki |
 | `protocol/knowledge-lifecycle.md` | 知识生命周期：微观状态转换（raw → processed → seedling → growing → evergreen → proposed → accepted → active）及每个状态的准入/退出标准 |
+| `protocol/knowledge-distillation.md` | 知识蒸馏协议：文章摘要 vs 知识概念的区别、Concept Page 必需结构（Definition/Core Idea/Mechanism/Relationships/Applications/Limitations）、蒸馏规则和质量检查清单 |
 | `protocol/knowledge-flow.md` | 知识流动协议：知识在 Federation 各层之间的完整流动路径（采集 → 摄取 → 策展 → 抽象 → 整合）、命令作为流动操作符、决策点与权限边界、质量门、反馈回路 |
 | `protocol/Git-Commit-Convention.md` | Git 提交规范：5 种 commit 类型（capture / update / reflect / promote / maintenance）及其语义 |
 
@@ -189,7 +194,7 @@ Master Wiki **不是**知识索引——它只存储跨领域抽象。
 
 - 系统层（文件名、标识符、命令）保持英文
 - 人类文档层使用中文为主，技术术语保留英文
-- 详见 `docs/project-state.md` 中的 Language Policy
+- 详见 `docs/language-policy.md`（Language Policy v1.0）
 
 ---
 
@@ -208,4 +213,4 @@ Master Wiki **不是**知识索引——它只存储跨领域抽象。
 | 查看系统健康报告 | `reports/` |
 | 查看集成审计 | `docs/SYSTEM_INTEGRATION_AUDIT.md`、`docs/POST_FIX_VALIDATION.md` |
 | 了解当前项目状态和阶段 | `docs/project-state.md` |
-| 了解语言使用策略 | `docs/project-state.md` → Language Policy |
+| 了解语言使用策略 | `docs/language-policy.md` |

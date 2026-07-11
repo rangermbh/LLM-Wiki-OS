@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11
-updated: 2026-07-11T23:00:00+08:00
+updated: 2026-07-12
 status: active
 ---
 
@@ -85,7 +85,7 @@ These decisions are settled. Do not reopen without explicit human request.
 | Directory structure | 27 directories, all layers present |
 | CLAUDE.md | Operating Constitution v2, 516 lines |
 | FEDERATION.md | Members, governance, authority model |
-| Protocol docs | 5 documents (federation, git convention, metadata schema, domain routing, knowledge lifecycle) |
+| Protocol docs | 6 documents (federation, git convention, metadata schema, domain routing, knowledge lifecycle, knowledge distillation) |
 | Templates | 10 templates (1 raw + 5 domain + 4 master) |
 | Commands | 5 commands (ingest, update, lint, promote, reflect) |
 | Domains | 2 domains (AI, Knowledge Management) |
@@ -98,13 +98,13 @@ These decisions are settled. Do not reopen without explicit human request.
 
 | Component | Detail |
 |-----------|--------|
-| Ingestion governance | Protocol docs created, `/ingest` updated. Not yet exercised with real content. |
+| Ingestion governance | Protocol docs created, `/ingest` updated with Distillation stage. Knowledge distillation protocol defines Article Summary vs Knowledge Concept distinction. |
 
 ### Not Yet Started
 
 | Component | Detail |
 |-----------|--------|
-| First real knowledge ingestion | No captures in inbox, no wiki pages created |
+| First real knowledge ingestion | 2 captures processed, 2 concept pages created (ai-agent-memory, rag) |
 | Health check automation | `/lint` and `/reflect` never run against content |
 | Cross-domain promotion | `/promote` never executed (needs content in 2+ domains first) |
 
@@ -112,13 +112,13 @@ These decisions are settled. Do not reopen without explicit human request.
 
 ## 5. Current Phase
 
-**Phase**: Knowledge Activation
+**Phase**: Knowledge Activation (2 concepts created)
 
-The architecture is complete. The system is ready for real knowledge. Next steps:
+The architecture is complete. Knowledge is flowing through the pipeline. Next steps:
 
-1. Create first capture in `capture/inbox/`
-2. Run `/ingest` end-to-end
-3. Populate both domains with initial wiki pages
+1. ~~Create first capture in `capture/inbox/`~~ ✓
+2. ~~Run `/ingest` end-to-end~~ ✓
+3. ~~Populate both domains with initial wiki pages~~ ✓ (AI: 2 concepts)
 4. Run `/lint` on real content
 5. Detect first cross-domain pattern → `/promote`
 
@@ -180,59 +180,13 @@ Agent never redefines the human's worldview automatically. When uncertain, the a
 
 ## 9. Language Policy（语言策略）
 
-LLM Wiki OS 是双语系统（中英双语）。语言选择取决于内容所在层。
+语言策略的完整定义见：**`docs/language-policy.md`**（Language Policy v1.0）。
 
-### System Layer（系统层）
+该文件取代本 section 此前的内容，新增了以下维度：
 
-**保持英文**。以下标识符不翻译：
+- 知识意义层与语言表达层的概念分离
+- 双仓库社区策略（GitHub / Gitee）
+- 来源语言保留策略
+- 未来多语言扩展架构
 
-| 类别 | 示例 |
-|------|------|
-| 文件名 | `CLAUDE.md`, `project-state.md`, `ai-agent-memory.md` |
-| YAML keys | `status`, `source_type`, `captured_from`, `ingested_by`, `ingested_to` |
-| 元数据值 | `raw`, `processed`, `seedling`, `growing`, `evergreen` |
-| 命令 | `/ingest`, `/update`, `/lint`, `/promote`, `/reflect` |
-| 协议标识符 | `RAW INPUT`, `INGESTED`, `CURATED`, `ABSTRACTED` |
-| 知识类型 | `concepts`, `methods`, `technologies`, `references`, `entities` |
-| Master 类别 | `models`, `principles`, `concepts`, `frameworks` |
-| Git commit 类型 | `capture`, `update`, `reflect`, `promote`, `maintenance` |
-
-**原因**：这些标识符是机器可读的系统契约。翻译会破坏 Agent 解析、模板匹配和 Git 日志聚合。
-
-### Human Documentation Layer（人类文档层）
-
-**中文为主**，关键术语保留英文并附中文说明。
-
-示例格式：
-- Knowledge Lifecycle（知识生命周期）
-- Federation Protocol（联邦协议）
-- Capture Layer（采集层）
-- Domain Wiki（领域 Wiki）
-- Master Wiki（主 Wiki）
-
-**规则**：
-- 首次出现的重要术语使用 `English（中文）` 格式
-- 文件名和路径保留英文原文，不翻译
-- 技术概念的解释使用中文
-
-### Knowledge Layer（知识层）
-
-**中文说明为主**，保留标准英文技术术语。
-
-保留英文原词的技术术语示例：
-- AI Agent
-- RAG（Retrieval-Augmented Generation）
-- Vector Database
-- Embedding
-- Memory Architecture
-- Transformer
-- LLM（Large Language Model）
-- HNSW（Hierarchical Navigable Small World）
-- k-NN（k-Nearest Neighbors）
-- API
-
-**规则**：
-- 广为人知的英文缩写直接使用（RAG、LLM、API）
-- 较生僻的缩写首次出现时给出全称
-- Wiki 页面的 Definition（定义）部分应提供清晰的中文解释
-- 技术准确性优先于语言纯粹性——当英文术语比中文翻译更精确时，保留英文
+核心原则不变：系统标识符保持英文（机器可读契约），知识页面中文为主（技术术语保留英文）。
