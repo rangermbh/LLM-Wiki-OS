@@ -72,6 +72,7 @@ These decisions are settled. Do not reopen without explicit human request.
 | D6 | Raw content is never modified | Captures in `inbox/` are immutable sources of truth. Only frontmatter metadata may be updated. |
 | D7 | Agent prefers update over create | Before creating a new wiki page, the agent must search for existing pages that can be updated instead. |
 | D8 | 5 knowledge types per domain | concepts, methods, technologies, references, entities — each with its own template and wiki subdirectory. |
+| D9 | Growth Boundary Classification | Three types for missing concept references: Type A — Capture-driven (page planned, Agent may execute), Type B — Network-required (page required, Agent proposes + Human approves), Type C — Speculative Candidate (page candidate, Human confirmation or future capture). Defined in knowledge-linking.md §5. |
 
 ---
 
@@ -98,33 +99,36 @@ These decisions are settled. Do not reopen without explicit human request.
 
 | Component | Detail |
 |-----------|--------|
-| — | 无进行中项目。S06 已完成，等待 S07 方向确定。 |
+| S07 System Reorientation | Step 1 (Emergent Organization) 已完成。Step 1.5 (Growth Boundary Classification) 已完成：Type A/B/C 三级分类建立，knowledge-linking.md 更新，全部 planned reference 重新分类。Step 2 (MOC in methods/) 等待 Human 确认。 |
 
 ### Completed Since Last Update
 
 | Component | Detail |
 |-----------|--------|
 | S06 System Stabilization | Schema drift 修复（AI + KM）、12 条 Domain→Master backlinks、Master Wiki Governance 创建、首次结构 lint（0 broken links, 0 orphans）、document-map 同步 |
+| Emergent Organization | `spaces/knowledge-management/wiki/concepts/emergent-organization.md` — S07 Step 1 产出。第三概念页，完成 Principle → Method → Result 链。跨 Note Atomicity + Zettelkasten Method 双源合成。Live wikilinks 到两个已有页面 + 两个 Master Concepts |
 | S05 Reflect Report | `/reflect` 执行：6 项发现（3 medium, 3 low），系统健康确认，S06 readiness 验证 |
+| S07 Step 1.5 Growth Boundary | Type A/B/C 三级增长分类建立并写入 knowledge-linking.md §5。全部 planned reference 重新分类：MOC → Type B (page required)，Digital Garden + AI deferred → Type C (page candidate)。KM schema 同步更新（Emergent Organization 移至 existing，MOC 移至 Methods/ required） |
 
 ### Not Yet Started
 
 | Component | Detail |
 |-----------|--------|
-| S07 Knowledge Expansion | 方向待 Human 确定：KM Domain Growth / AI Domain Deferred Activation / Third Domain |
+| S07 Step 2 | MOC (Map of Content) 方法页面 — Type B (network-required)，需 Human 批准后创建。将作为 KM Domain 首个 methods/ 页面，验证 taxonomy 的 concepts/ → methods/ 流动 |
+| Digital Garden | Type C (speculative candidate)，需 Human 确认或 future capture 触发 |
 | Health check automation | 首次 lint 已手动执行；自动化 lint 触发规则尚未建立 |
 
 ---
 
 ## 5. Current Phase
 
-**Phase**: S06 Knowledge System Stabilization & Governance Baseline — Completed. S07 direction pending.
+**Phase**: S07 System Reorientation — Step 1 (Emergent Organization) + Step 1.5 (Growth Boundary Classification) Complete. Step 2 (MOC in methods/) pending Human confirmation.
 
-AI Domain: Phase 1 Frozen (4 concepts). KM Domain: Activated (2 concepts). Master Wiki: Activated (2 concepts + governance).
+AI Domain: Phase 1 Frozen (4 concepts). KM Domain: Activated (3 concepts). Master Wiki: Activated (2 concepts + governance).
 
-Domain→Master backlink 网络完整（12 条双向链路）。Master Wiki 治理框架已建立。首次结构 lint 通过（0 broken links, 0 orphans）。
+Domain→Master backlink 网络完整（12 条双向链路）。KM Domain Principle → Method → Result 推导链已建立。Master Wiki 治理框架已建立。Growth Boundary 三级分类 (Type A/B/C) 已建立并集成到 knowledge-linking.md。首次结构 lint 通过（0 broken links, 0 orphans）。
 
-Next milestone: S07 direction (待 Human 确定)。
+Next milestone: S07 Step 2 MOC creation (待 Human 确认) 或 S07 方向确定。
 
 Phase 演进：
 1. ~~Architecture Building~~ ✓ (2026-07-11)
@@ -134,7 +138,7 @@ Phase 演进：
 5. ~~KM Domain Expansion~~ ✓ (2026-07-12, Zettelkasten Method + taxonomy stabilization)
 6. ~~Cross-Domain Abstraction~~ ✓ (2026-07-12, /promote × 2 + Master Wiki Construction)
 7. ~~Knowledge System Stabilization~~ ✓ (2026-07-12, schema drift fix + backlinks + governance + first lint)
-8. **S07: (未定义)** ← 当前过渡点
+8. **S07: System Reorientation** (2026-07-12, Step 1: Emergent Organization concept created; Principle → Method → Result chain established. Step 1.5: Growth Boundary Classification established — Type A/B/C three-tier system integrated into knowledge-linking.md) ← 当前阶段
 
 ---
 

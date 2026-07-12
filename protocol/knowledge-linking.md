@@ -153,7 +153,63 @@ Wiki 链接不是装饰。每条 `[[link]]` 声明两个概念之间存在有意
 
 ---
 
-## 5. Domain Boundary Rules（领域边界）
+## 5. Growth Boundary Classification（增长边界分类）
+
+当目标概念尚不存在时，并非所有缺失概念具有同等的创建优先级。本节定义三种缺失概念类型及其创建权限。
+
+### Type A — Capture-driven `(page planned)`
+
+**定义**：外部 capture 已存在于 `capture/inbox/`。页面创建属于正常 `/ingest` 流程的一部分。`(page planned)` 标记表示 "capture 已存在但尚未处理"。
+
+**创建权限**：Agent 可通过 `/ingest` 执行。
+
+**判断条件**：
+- `capture/inbox/` 中存在对应的原始采集文件
+- 该 capture 以该概念为核心主题
+
+### Type B — Network-required `(page required)`
+
+**定义**：现有知识网络依赖该节点闭合解释链。缺失该节点导致已有页面的机制描述或关系描述不完整。
+
+**创建权限**：Agent 提议，Human 批准。
+
+**判断条件（必须同时满足）**：
+1. **Mechanism incompleteness**：已有页面的 Mechanism 或 Relationships 节描述了一个不存在的节点作为依赖项
+2. **Not merely referential**：该引用是结构性的（"X 是 Y 的前置条件 / 互补机制"），而非列举性的（"参见 X"、"延伸阅读 X"）
+
+**弱形式**：Type B 存在弱形式——缺失节点不在理论理解层（离开它无法理解当前概念），而在实践闭合层（当前概念的机制链描述了需要该节点来完成的操作）。弱形式 Type B 仍需 Human 批准。
+
+### Type C — Speculative Candidate `(page candidate)`
+
+**定义**：Agent 根据领域知识判断相关，但无 external capture 且非现有网络必需。
+
+**创建权限**：需要 Human 确认，或未来 external capture 触发。
+
+**判断条件**：
+- 无 `capture/inbox/` 中的对应原始采集文件
+- 已有页面的机制和关系描述不依赖该节点
+- 引用属于 "相关概念"、"延伸阅读" 或 "未来可能连接"
+
+### Decision Matrix
+
+| Signal | Type A | Type B | Type C |
+|--------|--------|--------|--------|
+| External capture in inbox? | Yes | Maybe | No |
+| Existing page mechanism broken without it? | N/A | **Yes** | No |
+| Referenced in ≥2 existing pages? | Maybe | Usually | Maybe |
+| Agent internal knowledge only? | No | No | **Yes** |
+
+### Marker to Type Mapping
+
+| Marker | Type | Creation Authority |
+|--------|------|--------------------|
+| `(page planned)` | Type A — Capture-driven | Agent (`/ingest`) |
+| `(page required)` | Type B — Network-required | Agent proposes, Human approves |
+| `(page candidate)` | Type C — Speculative Candidate | Human confirmation or future capture |
+
+---
+
+## 6. Domain Boundary Rules
 
 链接应尊重 Domain 结构。不同 Domain 的知识类型路径不同：
 
@@ -179,7 +235,7 @@ KM → AI:
 
 ---
 
-## 6. Obsidian Integration（Obsidian 集成）
+## 7. Obsidian Integration（Obsidian 集成）
 
 LLM Wiki OS 使用以下 Obsidian 功能进行知识导航：
 

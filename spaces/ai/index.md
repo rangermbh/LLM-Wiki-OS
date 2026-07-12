@@ -12,8 +12,10 @@ updated: 2026-07-11T23:50
 - [[wiki/concepts/ai-agent-memory|AI Agent Memory]] — Memory infrastructure that turns stateless LLMs into stateful, experience-building agents
 
 - [[wiki/concepts/rag|RAG]] — Retrieval-augmented generation: optimizes LLM output by referencing external knowledge before generation
-<!-- planned: Vector Embeddings — semantic vector representations -->
-<!-- planned: Transformer Architecture — foundation model architecture -->
+- [[wiki/concepts/vector-embeddings|Vector Embeddings]] — Dense numerical representations mapping semantic meaning to vector space geometry
+- [[wiki/concepts/transformer-architecture|Transformer Architecture]] — Foundational neural architecture based on self-attention; backbone of modern LLMs and embedding models
+
+<!-- freeze: AI Domain Phase 1 (2026-07-12). Pull-based growth only. Deferred candidates: Tokenization, Attention, Fine-tuning (concepts); Vector DB, LangChain, LlamaIndex (technologies). All Type C (page candidate). -->
 
 ## Methods
 
@@ -27,8 +29,8 @@ updated: 2026-07-11T23:50
 
 *No entries yet.*
 
-<!-- planned: LangChain — framework for building LLM-powered applications -->
-<!-- planned: LlamaIndex — data framework for LLM applications -->
+<!-- candidate: LangChain — framework for building LLM-powered applications -->
+<!-- candidate: LlamaIndex — data framework for LLM applications -->
 
 ## References
 

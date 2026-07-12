@@ -364,6 +364,47 @@ Never:
 
 ---
 
+# Document Map Synchronization
+
+`docs/document-map.md` is the canonical navigation index for this repository. It must stay synchronized with actual system structure.
+
+## Trigger Conditions
+
+After any of the following structural changes, review and update document-map.md:
+
+- New or removed Domain
+- New or removed protocol file in `protocol/`
+- New or removed template in `templates/`
+- New or removed command in `.claude/commands/`
+- New or removed top-level directory or entry-point file
+- Domain lifecycle state change (Bootstrap → Activated → Frozen → Archived)
+- New knowledge type becomes active within a domain (first page in methods/, technologies/, etc.)
+
+## Update Rules
+
+When a trigger fires:
+
+1. Review document-map.md against the actual directory structure
+2. Add entries for new items in the correct section
+3. Remove entries when files are deleted (with human confirmation)
+4. Update domain-level status markers
+5. Verify all wikilinks in the document resolve correctly
+
+## Boundary
+
+document-map.md is a **navigation document**, not a state database:
+
+| Include | Exclude |
+|---------|---------|
+| What exists and where to find it | Individual page lifecycle status (seedling/growing/evergreen) |
+| Domain-level state (Activated, Frozen) | Session-specific context |
+| Structural descriptions and topology | Git history or commit references |
+| Entry-point links | Pending decisions or discussion context |
+
+Individual page states belong to domain `index.md` and `docs/project-state.md`. Session context belongs to `docs/session-snapshot.md`.
+
+---
+
 # Git Rules
 
 

@@ -19,6 +19,11 @@ Periodically review the overall health of the wiki system and suggest structural
    a. Do all domains have schema.md, index.md, log.md?
    b. Are templates up to date?
    c. Are commands working as designed?
+   d. Document consistency review:
+      - Compare document-map.md sections against actual directory structure (protocols, templates, commands, domains, wiki pages)
+      - Check project-state.md phase/status against session-snapshot.md current phase
+      - Verify session-snapshot.md pending decisions reflect actual resolution state
+      - Identify navigation gaps: items that exist on disk but are missing from document-map.md
 3. Identify improvement opportunities:
    a. New domains to create?
    b. Domains to split or merge?
