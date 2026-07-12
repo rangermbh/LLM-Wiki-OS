@@ -205,6 +205,9 @@ Master Wiki 不是知识索引——它只存储跨领域抽象。
 | `reports/system-alignment-check.md` | 系统对齐检查 |
 | `reports/system-alignment-report.md` | 系统对齐详细报告 |
 | `reports/knowledge-ingestion-readiness.md` | 知识摄取就绪评估 |
+| `reports/S08-AI-Domain-Health-Review.md` | S08 Step 1: AI Domain 健康审查报告（topology、maturity、growth boundary、candidate evaluation） |
+| `reports/S08-Governance-Synchronization.md` | S08 Step 2: Governance 同步报告（project-state、session-snapshot、document-map 同步） |
+| `reports/S08-Closure.md` | S08 Closure: 阶段关闭记录（final decisions、system state、phase evolution） |
 
 ### `docs/` — 集成审计报告
 

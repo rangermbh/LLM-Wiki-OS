@@ -1,6 +1,6 @@
 ---
 created: 2026-07-12
-updated: 2026-07-12T23:00
+updated: 2026-07-12T23:59
 status: active
 ---
 
@@ -8,14 +8,15 @@ status: active
 
 ## 1. Current Project Phase
 
-**S07 System Reorientation — Complete**
+**S09 Strategic Sync — Complete**
 
-S07 全部三步已完成：
+S09 战略同步完成。长期愿景重新定义：Personal Intelligence Support System。
 
-- Step 1: Emergent Organization concept 创建 — KM Domain Principle → Method → Result 推导链建立
-- Step 1.5: Growth Boundary Classification — Type A/B/C 三级分类体系建立
-- Step 2: MOC Integration & Curation Layer — KM Domain 首个 methods/ 页面创建，Principle → Method → Result → Curation 推导链闭合
-- Step 3: Closure & Stabilization — Schema 修复，KM Domain Foundation Complete 声明
+S08 全部三步已完成（archive）：
+
+- Step 1: AI Domain 健康审查 — 4 节点网络稳定，freeze 维持。报告：`reports/S08-AI-Domain-Health-Review.md`
+- Step 2: Governance Synchronization — project-state、session-snapshot、document-map 同步。报告：`reports/S08-Governance-Synchronization.md`
+- Step 3: Closure — S08 关闭记录。报告：`reports/S08-Closure.md`
 
 KM Domain 状态：**Foundation Complete, Pull-based Growth**（4 pages: 3 concepts + 1 method）
 
@@ -42,6 +43,12 @@ System Reorientation            ✓  (S07, 2026-07-12, Steps 1-3 complete)
   ├── Growth Boundary Class.    ✓  Type A/B/C 三级分类建立
   ├── Map of Content (MOC)      ✓  methods/ 首个页面, Type B→live
   └── Closure & Stabilization   ✓  Schema 修复, Foundation Complete 声明
+AI Domain Health Review         ✓  (S08, 2026-07-12, Steps 1-3 complete)
+  ├── Step 1: Health Review     ✓  4-node network stable, freeze maintained
+  ├── Step 2: Gov. Sync         ✓  project-state, session-snapshot, document-map
+  └── Step 3: Closure           ✓  S08 closed
+Strategic Sync                  ✓  (S09, 2026-07-12)
+  └── Vision Redefinition       ✓  Personal Intelligence Support System
 ```
 
 ---
@@ -343,7 +350,62 @@ S05 Cross-Domain Abstraction 的核心目标已达成：
 4. **KM Taxonomy Stabilization**：5 个知识类型的认知姿态定义（理解/执行/使用/引用/识别），concepts vs methods 边界澄清
 5. **Master Wiki Construction**：2 个 Master Concept 创建，Master Wiki 从空壳进入 Activated 状态
 
-### 当前焦点：S07 Complete — System Reorientation 完成
+### S08 Step 1 — AI Domain Health Review（2026-07-12）
+
+AI Domain 健康审查完成。4-concept 网络（Transformer → Vector Embeddings → RAG ∥ Agent Memory）验证稳定。详见 `reports/S08-AI-Domain-Health-Review.md`。
+
+**审查结论**：
+- Topology: 2-tier DAG, 0 broken links, 0 orphans
+- Maturity: 3 growing + 1 seedling (Transformer, lifecycle technicality)
+- Growth Boundary: Phase 1 Freeze appropriate, Pull-based growth sufficient
+- Candidates: 0 Type A, 0 Type B, 9 Type C
+- Decision: Option A — Maintain Current Freeze
+
+### S09 Strategic Sync — Complete（2026-07-12）
+
+**长期愿景重新定义**：LLM Wiki OS 从一个 Knowledge Management System 重新定义为 **Personal Intelligence Support System**。
+
+**核心价值**：帮助个人在世界知识、个人经验和持续反思之间建立连接 → 形成更好的认知 → 改善未来决策。
+
+**Personal Intelligence Loop**：
+
+```
+Goal → External Knowledge → Understanding → Experience → Reflection → Cognition → Decision → Outcome → New Reflection
+```
+
+当前 LLM Wiki OS 已覆盖 External Knowledge + Understanding。未来探索方向：Knowledge → Reflection → Cognition。
+
+**AI 角色 — Cognitive Companion**：
+- Remember — 在需要时调出相关知识和过往反思
+- Connect — 在知识、经验和决策之间发现模式
+- Challenge — 质疑假设，识别盲点
+- Reflect — 促使对结果及其含义进行更深层次的思考
+- Support — 提供认知基础设施，不替代人的思考
+
+**Human 保持的 Ownership**：
+- Goal Ownership — 人类设定方向和优先级
+- Cognition Ownership — 人类完成思考和综合
+- Decision Ownership — 人类做出选择
+
+**系统边界（不会成为）**：
+- Personal Profile System
+- Life Management OS
+- Everything OS
+- AI Decision Maker
+
+**核心原则**：Support Human Intelligence, Never Replace Human Cognition.
+
+**设计决策**：记录为 D10（project-state.md §3）。
+
+### S08 Step 2 — Governance Synchronization（archive）
+
+project-state.md (Sections 4/5/6)、session-snapshot.md (Sections 1/5/8)、document-map.md (Section 7) 同步完成。Section 6 vs 10: remain separate。10/10 consistency checks passed。报告：`reports/S08-Governance-Synchronization.md`
+
+### S08 Closure（archive）
+
+S08 阶段关闭。AI Domain freeze 维持，governance docs 同步，系统稳定。
+
+### S07 Complete — System Reorientation 完成（archive）
 
 S07 全部三步已执行完毕：
 
@@ -407,6 +469,29 @@ Repository infrastructure stabilized:
 | MOC → emergent-structure-from-local-interactions (Master) | 方法 → 概念 的操作化映射（abstract mechanism → operational method），非证据提供 | 新增第 13 条 KM→Master backlink，不同于 concepts/ 的 "provides evidence for" 语义——这是 "operationalization of" |
 | KM Domain Foundation Complete 声明 | 4-page 理论链闭合，0 Type B remaining，pull-based growth rule 生效 | KM Domain 从 Active Expansion 转入 Maintenance / Pull-based Growth 模式。未来扩展由 capture 或 human 决策驱动，非 agent 自主扩展 |
 
+### S08 Step 1 关键决策记录
+
+| # | 决策 | 影响 |
+|---|------|------|
+| AI Domain Freeze 维持 | Health review 确认：network stable, 0 Type A/B, freeze appropriate | AI Domain 继续 Phase 1 Frozen + Pull-based Growth。9 Type C candidates 保持 speculative，不主动扩展 |
+| Transformer seedling 不强制提升 | 系统综合页面无 capture source，lifecycle criteria 边缘案例 | 记录为已知不对称，等待自然 capture 触发提升 |
+
+### S08 Step 2 关键决策记录
+
+| # | 决策 | 影响 |
+|---|------|------|
+| Section 6 vs 10 remain separate | Git History (backward-looking evidence) vs Repository Governance (forward-looking rules) — different semantics, lifecycles, update triggers | 保持现有结构，不合并。小重叠（branch/remote 信息）可接受 |
+| Git History 扩展至 9 milestone commits | 5→9 commits，覆盖 S01–S07，每个代表一个完整阶段 | 提供完整的 repo evolution evidence，非完整 log |
+
+### S09 Strategic Sync 关键决策记录
+
+| # | 决策 | 影响 |
+|---|------|------|
+| D10 — Personal Intelligence Support System | 长期目标从 Knowledge Management System 重定义为 Personal Intelligence Support System | 未来演化方向：Knowledge → Reflection → Cognition。AI 角色从 Wiki Maintainer 扩展为 Cognitive Companion |
+| Cognitive Companion 五个职责 | Remember / Connect / Challenge / Reflect / Support | AI 行为边界：支持认知过程，不替代认知本身 |
+| Human Ownership 三原则 | Goal / Cognition / Decision — 三者不可让渡 | 即使系统演化，Human 始终是认知主体 |
+| 四个系统边界 | NOT: Profile System / Life OS / Everything OS / AI Decision Maker | 防止 scope creep，保持系统聚焦 |
+
 ---
 
 ## 6. Pending Decisions
@@ -456,12 +541,13 @@ Repository infrastructure stabilized:
 
 ## 8. Next Recommended Actions
 
-S07 System Reorientation 已完成。系统处于稳定等待状态。
+S09 Strategic Sync 完成。系统处于稳定等待状态。长期愿景已记录，战略基础已建立。
 
 ### 短期（等待 Human 方向）
 
-1. **Digital Garden** — Type C (speculative candidate)。4 个页面引用，最自然的 KM Domain 下一步扩展。需要 Human 确认或 external capture 触发。
-2. **KM Domain seedling → growing** — 当前 4 页全部 seedling。通过实际使用和 `/update` 周期自然提升，不建议强制 promotion。
+1. **S10 方向确定** — Human 决定下一阶段目标（沿 Knowledge → Reflection → Cognition 路径探索，或继续 Domain refinement）
+2. **Digital Garden** — Type C (speculative candidate)。4 个页面引用，最自然的 KM Domain 下一步扩展。需要 Human 确认或 external capture 触发
+3. **KM Domain seedling → growing** — 当前 4 页全部 seedling。通过实际使用和 `/update` 周期自然提升，不建议强制 promotion
 
 ### 中期（取决于 Human 方向）
 

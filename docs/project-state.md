@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11
-updated: 2026-07-12T23:00
+updated: 2026-07-12T23:59
 status: active
 ---
 
@@ -13,11 +13,45 @@ status: active
 | Component | Role |
 |-----------|------|
 | Obsidian | Knowledge editing interface |
-| Claude Code | Wiki Maintainer Agent |
+| Claude Code | Wiki Maintainer Agent / Cognitive Companion |
 | Git | Knowledge evolution history |
 | Markdown | Knowledge storage format |
 
 **Core idea**: "一主多辅" (One Master, Many Domains) — a Master Wiki for the personal world model, and Domain Wikis for specialized knowledge. Knowledge flows upward: Capture → Domain → Master. Only cross-domain patterns reach Master.
+
+### Long-term Vision (S09 Strategic Redefinition)
+
+**LLM Wiki OS is ultimately a Personal Intelligence Support System**, not merely a Knowledge Management System.
+
+**Core value**: Help individuals connect world knowledge, personal experience, and continuous reflection to form better cognition and improve future decisions.
+
+**Personal Intelligence Loop**:
+
+```
+Goal → External Knowledge → Understanding → Experience → Reflection → Cognition → Decision → Outcome → New Reflection
+```
+
+**Current coverage**: LLM Wiki OS already serves External Knowledge and Understanding. Future exploration focuses on: Knowledge → Reflection → Cognition.
+
+**AI Role — Cognitive Companion**:
+- Remember — surface relevant knowledge and past reflections
+- Connect — find patterns across knowledge, experience, and decisions
+- Challenge — question assumptions and identify blind spots
+- Reflect — prompt deeper thinking about outcomes and their implications
+- Support — provide cognitive infrastructure without taking ownership
+
+**Human Authority** (non-negotiable):
+- Goal Ownership — Human sets direction and priorities
+- Cognition Ownership — Human does the thinking and synthesis
+- Decision Ownership — Human makes the choices
+
+**Boundaries** (what this system will NOT become):
+- Personal Profile System
+- Life Management OS
+- Everything OS
+- AI Decision Maker
+
+**Principle**: Support Human Intelligence, Never Replace Human Cognition.
 
 ---
 
@@ -73,6 +107,7 @@ These decisions are settled. Do not reopen without explicit human request.
 | D7 | Agent prefers update over create | Before creating a new wiki page, the agent must search for existing pages that can be updated instead. |
 | D8 | 5 knowledge types per domain | concepts, methods, technologies, references, entities — each with its own template and wiki subdirectory. |
 | D9 | Growth Boundary Classification | Three types for missing concept references: Type A — Capture-driven (page planned, Agent may execute), Type B — Network-required (page required, Agent proposes + Human approves), Type C — Speculative Candidate (page candidate, Human confirmation or future capture). Defined in knowledge-linking.md §5. |
+| D10 | Strategic Redefinition: Personal Intelligence Support System | S09 Strategic Sync. LLM Wiki OS long-term goal redefined from Knowledge Management System to Personal Intelligence Support System. Core value: connect world knowledge, personal experience, and continuous reflection → better cognition → improved decisions. AI role: Cognitive Companion (Remember, Connect, Challenge, Reflect, Support). Human retains Goal/Cognition/Decision Ownership. Boundaries: NOT Profile System, Life OS, Everything OS, or AI Decision Maker. Principle: Support Human Intelligence, Never Replace Human Cognition. |
 
 ---
 
@@ -99,38 +134,37 @@ These decisions are settled. Do not reopen without explicit human request.
 
 | Component | Detail |
 |-----------|--------|
-| S07 System Reorientation | **Complete.** Step 1: Emergent Organization created. Step 1.5: Growth Boundary Classification (Type A/B/C). Step 2: MOC method page created, Principle → Method → Result → Curation chain closed. Step 3: Schema fix, KM Domain Foundation Complete declared, S07 closeout. |
+| — | *No active work. S09 Strategic Sync complete. Awaiting S10 direction.* |
 
 ### Completed Since Last Update
 
 | Component | Detail |
 |-----------|--------|
 | S06 System Stabilization | Schema drift 修复（AI + KM）、12 条 Domain→Master backlinks、Master Wiki Governance 创建、首次结构 lint（0 broken links, 0 orphans）、document-map 同步 |
-| Emergent Organization | `spaces/knowledge-management/wiki/concepts/emergent-organization.md` — S07 Step 1 产出。第三概念页，完成 Principle → Method → Result 链。跨 Note Atomicity + Zettelkasten Method 双源合成。Live wikilinks 到两个已有页面 + 两个 Master Concepts |
-| S05 Reflect Report | `/reflect` 执行：6 项发现（3 medium, 3 low），系统健康确认，S06 readiness 验证 |
-| S07 Step 1.5 Growth Boundary | Type A/B/C 三级增长分类建立并写入 knowledge-linking.md §5。全部 planned reference 重新分类：MOC → Type B (page required)，Digital Garden + AI deferred → Type C (page candidate)。KM schema 同步更新（Emergent Organization 移至 existing，MOC 移至 Methods/ required） |
-| S07 Step 2 MOC | `spaces/knowledge-management/wiki/methods/map-of-content.md` — S07 Step 2 产出。KM Domain 首个 methods/ 页面。三个概念页的 MOC `(page required)` 标记转为 live wikilinks。KM Domain Principle → Method → Result → Curation 推导链闭合 |
-| S07 Step 3 Closure | Schema 修复（KM schema MOC planned→existing），KM Domain Foundation Complete 声明，session-snapshot 全面更新，S07 阶段关闭 |
+| S07 System Reorientation | Steps 1-3 complete: Emergent Organization + Growth Boundary Classification + MOC Curation Method + Closure. KM Domain Foundation Complete declared. |
+| S08 Step 1 AI Domain Health Review | Full health review: topology (2-tier DAG, 4 nodes), concept maturity (3 growing + 1 seedling), growth boundary (freeze appropriate), candidate evaluation (0 Type A, 0 Type B, 9 Type C). Recommendation: Maintain Current Freeze — accepted. Report: `reports/S08-AI-Domain-Health-Review.md` |
+| S08 Step 2 Governance Synchronization | project-state.md (Sections 4/5/6), session-snapshot.md (Sections 1/5/8), document-map.md (Section 7) synchronized. Section 6 vs 10 evaluation: remain separate. 10/10 consistency checks passed. Report: `reports/S08-Governance-Synchronization.md` |
+| S08 Closure | Phase complete. S08 closed. Reports archived. |
+| S09 Strategic Sync | Long-term vision redefined: Personal Intelligence Support System. AI role: Cognitive Companion. Strategic boundaries established. Design Decision D10 recorded. |
 
 ### Not Yet Started
 
 | Component | Detail |
 |-----------|--------|
-| S07 Step 3 | Schema 修复完成，KM Domain Foundation Complete 声明已发布，S07 关闭 |
+| S08 Steps 3+ | 待 Human 决定 S08 后续步骤 |
 | Digital Garden | Type C (speculative candidate)，需 Human 确认或 future capture 触发 |
-| S08 Direction | 待 Human 决定：KM Domain refinement / AI Domain integration / Cross-domain modeling / Governance review |
 
 ---
 
 ## 5. Current Phase
 
-**Phase**: S07 System Reorientation — **Complete.** KM Domain: 3 concepts + 1 method, Foundation Complete, Pull-based Growth. System awaiting S08 direction.
+**Phase**: S09 Strategic Sync — **Complete.** Long-term vision redefined: Personal Intelligence Support System. Strategic direction recorded. No implementation.
 
-AI Domain: Phase 1 Frozen (4 concepts). KM Domain: Foundation Complete (3 concepts + 1 method, Pull-based Growth). Master Wiki: Activated (2 concepts + governance).
+AI Domain: Phase 1 Frozen (4 concepts, Pull-based Growth). KM Domain: Foundation Complete (3 concepts + 1 method, Pull-based Growth). Master Wiki: Activated (2 concepts + governance).
 
-Domain→Master backlink 网络完整（13 条双向链路：5 KM + 8 AI）。KM Domain Principle → Method → Result → Curation 推导链已闭合。Master Wiki 治理框架已建立。Growth Boundary 三级分类 (Type A/B/C) 已建立。0 Type A, 0 Type B, 1 Type C (Digital Garden)。Lint 通过（0 broken links, 0 orphans）。
+Domain→Master backlink 网络完整（13 条双向链路：5 KM + 8 AI）。KM Domain Principle → Method → Result → Curation 推导链已闭合。Growth Boundary 三级分类 (Type A/B/C) 已建立。0 Type A, 0 Type B, 1 Type C (Digital Garden)。Lint 通过（0 broken links, 0 orphans）。S08 Step 1 健康审查通过：AI Domain 4 节点网络稳定，freeze 维持。
 
-Next milestone: S08 方向确定（待 Human 决定：Digital Garden Type C 评估、AI↔KM 跨领域模式挖掘、系统治理审查）
+Next milestone: S10 方向确定（待 Human 决定）。Strategic foundation laid — future work explores Knowledge → Reflection → Cognition path.
 
 Phase 演进：
 1. ~~Architecture Building~~ ✓ (2026-07-11)
@@ -141,6 +175,8 @@ Phase 演进：
 6. ~~Cross-Domain Abstraction~~ ✓ (2026-07-12, /promote × 2 + Master Wiki Construction)
 7. ~~Knowledge System Stabilization~~ ✓ (2026-07-12, schema drift fix + backlinks + governance + first lint)
 8. **S07: System Reorientation** ✓ (2026-07-12, Steps 1-3 complete: Emergent Organization + Growth Boundary + MOC Integration + Closure。KM Domain Foundation Complete, Pull-based Growth)
+9. **S08: AI Domain Health Review** ✓ (2026-07-12, Steps 1-3 complete: Health Review + Governance Synchronization + Closure。AI Domain freeze 维持，governance docs 同步)
+10. **S09: Strategic Sync** ✓ (2026-07-12, Strategic Redefinition: Personal Intelligence Support System。Long-term vision recorded, no implementation)
 
 ---
 
@@ -150,11 +186,16 @@ Phase 演进：
 |--------|---------|
 | `2b975ce` | genesis: initialize LLM Wiki OS |
 | `5cc0106` | upgrade: LLM Wiki Federation OS v1.0 |
-| `6364b02` | maintenance: add knowledge-management domain |
-| `6867a14` | maintenance: add knowledge ingestion readiness report |
-| `6b268e1` | maintenance: add ingestion governance layer |
+| `f13bf11` | update: ai - add AI Agent Memory concept (first ingestion) |
+| `3b85702` | S06 complete: schema stabilization, master governance, and lint baseline |
+| `c313759` | docs: record repository governance baseline |
+| `d470085` | docs: establish knowledge growth boundary classification |
+| `93bbed2` | update: add MOC curation method layer to KM Domain |
+| `e2b1fcb` | maintenance: close S07 stabilization and declare KM foundation complete |
+| `a2c9b07` | maintenance: record Structured Management Layer as deferred improvement (Type C) |
 
-Branch: `master`. Remote: not configured.
+Branch: `master`. Remote: `origin` (GitHub). Mirror: Gitee (manual pull).
+Last synchronized: 2026-07-12 (S08 Step 2)
 
 ---
 
