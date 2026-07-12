@@ -66,7 +66,7 @@ Note Atomicity（笔记原子性）是个人知识管理中的一项基本原则
 ### Domain Connections
 
 - [[wiki/concepts/zettelkasten-method|Zettelkasten Method]] — 笔记原子性是 Zettelkasten 方法的核心操作原则。Luhmann 的"一张卡一个想法"是对原子性最早的明确表述。Note Atomicity 定义知识单元的性质（WHAT），Zettelkasten 定义操作这些单元的方法（HOW）
-- Map of Content (MOC) — MOC 是对原子笔记网络施加临时有序结构的策展层。原子性创造了"涌现结构"，MOC 在这个结构之上提供"导航路径"。两者是互补关系：原子笔记提供可链接的基本单元，MOC 提供针对特定上下文的组织视图（page required）
+- [[../methods/map-of-content|Map of Content (MOC)]] — MOC 是对原子笔记网络施加临时有序结构的策展层。原子性创造了"涌现结构"，MOC 在这个结构之上提供"导航路径"。两者是互补关系：原子笔记提供可链接的基本单元，MOC 提供针对特定上下文的组织视图
 - [[wiki/concepts/emergent-organization|Emergent Organization]] — 笔记原子性是涌现组织的先决条件。只有当每条笔记是精确的语义单元时，链接才能在笔记之间建立有意义的关系。原子性使知识的结构从"预先设计的层级"转向"在链接中涌现的网络"
 - Digital Garden — 数字花园的"持续生长"隐喻依赖原子笔记的可组合性。非原子的文档不能像植物一样自然生长——它们只能被重写。原子笔记可以独立演化、被重新链接、被跨越不同上下文的多个思想线复用（page candidate）
 
@@ -97,4 +97,4 @@ Note Atomicity（笔记原子性）是个人知识管理中的一项基本原则
 - 本页面为 KM Domain 首个概念页面，按 knowledge-distillation.md v1.0.0 标准创建
 - 笔记原子性是比 Zettelkasten、MOC、Digital Garden 更基础的原则——它是一种"元方法"（meta-method），定义了笔记应该是什么样的，而非如何组织笔记。这也是为什么它作为 KM Domain 的起点：先定义知识单元的性质，再讨论如何组织这些单元
 - 保留 Note Atomicity、Evergreen Notes、Zettelkasten、MOC（Map of Content）、Digital Garden、PKM、wikilink 等标准英文术语
-- TODO: 创建 Map of Content (MOC) 方法页面（page required — Type B, 需 Human 批准）。Digital Garden（page candidate — Type C, 需 Human 确认或 future capture）
+- TODO: Digital Garden（page candidate — Type C, 需 Human 确认或 future capture）

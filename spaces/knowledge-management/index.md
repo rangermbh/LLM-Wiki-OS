@@ -17,7 +17,7 @@ updated: 2026-07-12
 
 <!-- Techniques, workflows, procedures. See wiki/methods/ -->
 
-*No entries yet.*
+- [[wiki/methods/map-of-content|Map of Content (MOC)]] — 策展方法：在涌现的知识结构中识别主题集群并创建导航入口。MOC 是 descriptive（事后描述）而非 prescriptive（事前规定）——它描述链接网络中已形成的结构，使涌现结构对人可见可用。Curation-type，依赖 Emergent Organization（结构来源）和 Zettelkasten Method（历史谱系）
 
 ## Technologies
 

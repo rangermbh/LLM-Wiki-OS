@@ -139,8 +139,8 @@ spaces/
 │   ├── index.md                  # 领域知识索引
 │   ├── log.md                    # 领域操作日志
 │   └── wiki/
-│       ├── concepts/             # 知识管理概念（2 pages）
-│       ├── methods/              # 知识管理方法
+│       ├── concepts/             # 知识管理概念（3 pages）
+│       ├── methods/              # 知识管理方法（1 page）
 │       ├── technologies/         # 知识管理工具
 │       ├── references/           # 知识管理参考文献
 │       └── entities/             # 知识管理实体（人物/社区）
@@ -172,7 +172,7 @@ AI Domain 已达到 Phase 1 稳定状态，进入 maintenance / expansion-ready 
 
 **拓扑**：`Transformer → Vector Embeddings → (RAG ∥ Agent Memory)`
 
-### KM Domain（Activated · 3 concepts）
+### KM Domain（Activated · 3 concepts · 1 method）
 
 KM Domain 已激活，Principle → Method → Result 推导链已建立。
 
@@ -181,8 +181,9 @@ KM Domain 已激活，Principle → Method → Result 推导链已建立。
 | [[spaces/knowledge-management/wiki/concepts/note-atomicity\|Note Atomicity]] | Principle | 笔记原子性：每条笔记一个独立概念，KM Domain 首个锚点概念 |
 | [[spaces/knowledge-management/wiki/concepts/zettelkasten-method\|Zettelkasten Method]] | Method | 卡片盒方法：以原子笔记为单元、通过密集链接和序列编号构建知识网络 |
 | [[spaces/knowledge-management/wiki/concepts/emergent-organization\|Emergent Organization]] | Result | 涌现组织：原子单元在局部链接规则下自发形成全局知识结构 |
+| [[spaces/knowledge-management/wiki/methods/map-of-content\|Map of Content (MOC)]] | Method | 策展方法：识别涌现主题集群并创建导航入口，使涌现结构对人可见可用 |
 
-**拓扑**：`Note Atomicity (Principle) → Zettelkasten Method (Method) → Emergent Organization (Result)`
+**拓扑**：`Note Atomicity (Principle) → Zettelkasten Method (Method) → Emergent Organization (Result) → MOC (Curation)`
 
 每条领域自包含：有自己的 schema、index、log 和 5 种知识类型的 wiki 子目录。
 

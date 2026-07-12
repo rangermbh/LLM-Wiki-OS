@@ -113,7 +113,7 @@ Luhmann 将这种涌现现象描述为 Zettelkasten 具有"交流伙伴"（Kommu
 
 - [[wiki/concepts/note-atomicity|Note Atomicity]] — **前置原则**。Note Atomicity 定义了知识单元的质量标准（WHAT），Emergent Organization 描述了这些单元在链接中产生的结构现象（WHAT EMERGES）。没有原子笔记的精确语义边界，链接无法建立精确的语义关系——涌现组织退化。原子性 → 精确链接 → 有意义涌现。这是 Principle → Result 的直接推导链
 - [[wiki/concepts/zettelkasten-method|Zettelkasten Method]] — **方法实例**。Zettelkasten Method 定义了局部链接的交互规则（HOW）——序列编号编码思想谱系，交叉引用建立语义连接，入口点索引提供导航锚点。这些规则是涌现组织的**实现机制**：Zettelkasten 定义了链接决策如何做、如何记录、如何积累。Emergent Organization 解释了这些规则的**产物**——为什么遵循这些规则会导致知识结构的自发形成
-- Map of Content (MOC) — MOC 是涌现组织的**互补层**。涌现组织产生原始结构（什么与什么相关），MOC 在这个结构上创建策展导航（如何进入和遍历）。两者的关系是：涌现提供结构，MOC 使结构可见和可用（page required）
+- [[../methods/map-of-content|Map of Content (MOC)]] — MOC 是涌现组织的**互补层**。涌现组织产生原始结构（什么与什么相关），MOC 在这个结构上创建策展导航（如何进入和遍历）。两者的关系是：涌现提供结构，MOC 使结构可见和可用
 - Digital Garden — 数字花园的"持续生长"隐喻依赖涌现组织的增长逻辑。非原子的、预设结构的知识库不能"生长"——它们只能被重新组织。涌现组织使知识结构可以像有机系统一样演化——新的连接不断添加，结构随使用持续调整（page candidate）
 
 ### Master Concepts
@@ -154,4 +154,4 @@ Luhmann 将这种涌现现象描述为 Zettelkasten 具有"交流伙伴"（Kommu
 - 本页面的理论框架（三个条件：良好单元 + 局部规则 + 积累持久化）与 Master Concept "局部交互涌现全局结构"的机制三条件完全对应。这不是刻意的对齐——它是同一结构机制在 KM 领域的自然映射
 - 保留 Emergent Organization、Bottom-up、Top-down、Serendipity、Topic Cluster、Bridge Concept、Line of Argument、MOC（Map of Content）、Structure Note、Kommunikationspartner 等标准英文术语
 - Emergent Organization 为两个 Master Concept 提供领域证据，但不提出新的 Master Concept。它填充了 KM Domain 的概念基础设施——下一个阶段（MOC、Digital Garden）将在此基础上构建方法层和实践层
-- TODO: 创建 Map of Content (MOC) 方法页面（methods/），作为涌现组织到可导航结构的策展桥梁（page required — Type B, 需 Human 批准）
+- MOC 方法页面已创建：[[../methods/map-of-content|Map of Content (MOC)]]。Emergent Organization → MOC 的涌现→策展链接已闭合。下一个自然扩展：Digital Garden（page candidate — Type C）
