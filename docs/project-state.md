@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11
-updated: 2026-07-12T23:59
+updated: 2026-07-12T23:00
 status: active
 ---
 
@@ -99,7 +99,7 @@ These decisions are settled. Do not reopen without explicit human request.
 
 | Component | Detail |
 |-----------|--------|
-| S07 System Reorientation | Step 1 (Emergent Organization) 已完成。Step 1.5 (Growth Boundary Classification) 已完成：Type A/B/C 三级分类建立，knowledge-linking.md 更新，全部 planned reference 重新分类。Step 2 (MOC in methods/) 已完成：KM Domain 首个 methods/ 页面创建，三个概念页的 MOC backlinks 激活，Principle → Method → Result → Curation 推导链闭合。 |
+| S07 System Reorientation | **Complete.** Step 1: Emergent Organization created. Step 1.5: Growth Boundary Classification (Type A/B/C). Step 2: MOC method page created, Principle → Method → Result → Curation chain closed. Step 3: Schema fix, KM Domain Foundation Complete declared, S07 closeout. |
 
 ### Completed Since Last Update
 
@@ -110,26 +110,27 @@ These decisions are settled. Do not reopen without explicit human request.
 | S05 Reflect Report | `/reflect` 执行：6 项发现（3 medium, 3 low），系统健康确认，S06 readiness 验证 |
 | S07 Step 1.5 Growth Boundary | Type A/B/C 三级增长分类建立并写入 knowledge-linking.md §5。全部 planned reference 重新分类：MOC → Type B (page required)，Digital Garden + AI deferred → Type C (page candidate)。KM schema 同步更新（Emergent Organization 移至 existing，MOC 移至 Methods/ required） |
 | S07 Step 2 MOC | `spaces/knowledge-management/wiki/methods/map-of-content.md` — S07 Step 2 产出。KM Domain 首个 methods/ 页面。三个概念页的 MOC `(page required)` 标记转为 live wikilinks。KM Domain Principle → Method → Result → Curation 推导链闭合 |
+| S07 Step 3 Closure | Schema 修复（KM schema MOC planned→existing），KM Domain Foundation Complete 声明，session-snapshot 全面更新，S07 阶段关闭 |
 
 ### Not Yet Started
 
 | Component | Detail |
 |-----------|--------|
-| S07 Step 2 | MOC (Map of Content) 方法页面已完成 — KM Domain 首个 methods/ 页面。三个概念页的 MOC backlinks 已激活（Type B → live wikilinks）。Principle → Method → Result → Curation 推导链闭合。 |
+| S07 Step 3 | Schema 修复完成，KM Domain Foundation Complete 声明已发布，S07 关闭 |
 | Digital Garden | Type C (speculative candidate)，需 Human 确认或 future capture 触发 |
-| Health check automation | 首次 lint 已手动执行；自动化 lint 触发规则尚未建立 |
+| S08 Direction | 待 Human 决定：KM Domain refinement / AI Domain integration / Cross-domain modeling / Governance review |
 
 ---
 
 ## 5. Current Phase
 
-**Phase**: S07 System Reorientation — Step 1 (Emergent Organization) + Step 1.5 (Growth Boundary Classification) + Step 2 (MOC Integration) Complete.
+**Phase**: S07 System Reorientation — **Complete.** KM Domain: 3 concepts + 1 method, Foundation Complete, Pull-based Growth. System awaiting S08 direction.
 
-AI Domain: Phase 1 Frozen (4 concepts). KM Domain: Activated (3 concepts + 1 method). Master Wiki: Activated (2 concepts + governance).
+AI Domain: Phase 1 Frozen (4 concepts). KM Domain: Foundation Complete (3 concepts + 1 method, Pull-based Growth). Master Wiki: Activated (2 concepts + governance).
 
-Domain→Master backlink 网络完整（12 条双向链路）。KM Domain Principle → Method → Result → Curation 推导链已闭合。Master Wiki 治理框架已建立。Growth Boundary 三级分类 (Type A/B/C) 已建立并集成到 knowledge-linking.md。首次结构 lint 通过（0 broken links, 0 orphans）。
+Domain→Master backlink 网络完整（13 条双向链路：5 KM + 8 AI）。KM Domain Principle → Method → Result → Curation 推导链已闭合。Master Wiki 治理框架已建立。Growth Boundary 三级分类 (Type A/B/C) 已建立。0 Type A, 0 Type B, 1 Type C (Digital Garden)。Lint 通过（0 broken links, 0 orphans）。
 
-Next milestone: S07 方向确定（Step 2 已完成，待评估下一步：Digital Garden Type C 评估、或 S08 新阶段）
+Next milestone: S08 方向确定（待 Human 决定：Digital Garden Type C 评估、AI↔KM 跨领域模式挖掘、系统治理审查）
 
 Phase 演进：
 1. ~~Architecture Building~~ ✓ (2026-07-11)
@@ -139,7 +140,7 @@ Phase 演进：
 5. ~~KM Domain Expansion~~ ✓ (2026-07-12, Zettelkasten Method + taxonomy stabilization)
 6. ~~Cross-Domain Abstraction~~ ✓ (2026-07-12, /promote × 2 + Master Wiki Construction)
 7. ~~Knowledge System Stabilization~~ ✓ (2026-07-12, schema drift fix + backlinks + governance + first lint)
-8. **S07: System Reorientation** (2026-07-12, Step 1: Emergent Organization concept created; Principle → Method → Result chain established. Step 1.5: Growth Boundary Classification established — Type A/B/C three-tier system integrated into knowledge-linking.md. Step 2: MOC method page created — KM Domain 首个 methods/ 页面，Principle → Method → Result → Curation 推导链闭合) ← 当前阶段
+8. **S07: System Reorientation** ✓ (2026-07-12, Steps 1-3 complete: Emergent Organization + Growth Boundary + MOC Integration + Closure。KM Domain Foundation Complete, Pull-based Growth)
 
 ---
 

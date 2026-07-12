@@ -59,7 +59,7 @@ knowledge-management/
 | Type | Directory | Examples (existing) | Examples (planned) |
 |------|-----------|---------------------|--------------------|
 | Concepts | `wiki/concepts/` | Note Atomicity, Zettelkasten Method, Emergent Organization | Digital Garden (candidate) |
-| Methods | `wiki/methods/` | — | Map of Content (required) |
+| Methods | `wiki/methods/` | Map of Content | — |
 | Technologies | `wiki/technologies/` | — | Obsidian, Dataview Plugin |
 | References | `wiki/references/` | — | How to Take Smart Notes, Building a Second Brain |
 | Entities | `wiki/entities/` | — | Niklas Luhmann, Tiago Forte |
@@ -68,7 +68,7 @@ knowledge-management/
 
 - **Note Atomicity** 归类为 Concept：它定义知识单元的性质（边界约束、完整性要求、标题契约）——这是"知识单元应该是什么"的理解，而非"如何操作"的步骤
 - **Zettelkasten Method** 归类为 Concept（当前）：本页面讨论其机制、原则和设计哲学。如果未来创建操作步骤版本（每日工作流、索引维护流程），那将放入 Methods
-- **Map of Content (MOC)** 规划为 Methods/（page required — Type B）：MOC 描述如何为涌现主题集群创建策展导航层，属于执行姿态（HOW），非理解姿态（WHAT）
+- **Map of Content (MOC)** 归类为 Methods/（已创建 — S07 Step 2）：MOC 描述如何为涌现主题集群创建策展导航层，属于执行姿态（HOW），非理解姿态（WHAT）。KM Domain 首个 methods/ 页面
 
 ## Cross-Domain Connections
 

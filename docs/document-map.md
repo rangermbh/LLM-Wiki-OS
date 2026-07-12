@@ -172,7 +172,7 @@ AI Domain 已达到 Phase 1 稳定状态，进入 maintenance / expansion-ready 
 
 **拓扑**：`Transformer → Vector Embeddings → (RAG ∥ Agent Memory)`
 
-### KM Domain（Activated · 3 concepts · 1 method）
+### KM Domain（Foundation Complete · 3 concepts · 1 method · Pull-based Growth）
 
 KM Domain 已激活，Principle → Method → Result 推导链已建立。
 

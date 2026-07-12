@@ -1,6 +1,6 @@
 ---
 created: 2026-07-12
-updated: 2026-07-12T15:00
+updated: 2026-07-12T23:00
 status: active
 ---
 
@@ -8,15 +8,22 @@ status: active
 
 ## 1. Current Project Phase
 
-**S07 System Reorientation — Step 1 + Step 1.5 Complete**
+**S07 System Reorientation — Complete**
 
-S06 Knowledge System Stabilization & Governance Baseline 已完成（2026-07-12）。S07 Step 1（Emergent Organization concept）已创建（2026-07-12）。S07 Step 1.5（Growth Boundary Classification）已建立（2026-07-12）：Type A/B/C 三级分类体系集成到 knowledge-linking.md §5。KM Domain Principle → Method → Result 推导链已建立。
+S07 全部三步已完成：
+
+- Step 1: Emergent Organization concept 创建 — KM Domain Principle → Method → Result 推导链建立
+- Step 1.5: Growth Boundary Classification — Type A/B/C 三级分类体系建立
+- Step 2: MOC Integration & Curation Layer — KM Domain 首个 methods/ 页面创建，Principle → Method → Result → Curation 推导链闭合
+- Step 3: Closure & Stabilization — Schema 修复，KM Domain Foundation Complete 声明
+
+KM Domain 状态：**Foundation Complete, Pull-based Growth**（4 pages: 3 concepts + 1 method）
 
 系统三层完整状态：
 
 ```
 Master Wiki:   Activated (2 concepts + governance — 治理框架已建立)
-Domain Wikis:  AI (4 concepts, Phase 1 Frozen) + KM (3 concepts, Activated)
+Domain Wikis:  AI (4 concepts, Phase 1 Frozen) + KM (3 concepts + 1 method, Foundation Complete, Pull-based Growth)
 Capture Layer: 4 captures processed, inbox clean
 ```
 
@@ -30,10 +37,11 @@ Knowledge Quality Improvement   ✓  (2026-07-12)
 Knowledge Scaling               ✓  (2026-07-12)
 Cross-Domain Abstraction        ✓  (S05, 2026-07-12)
 System Stabilization            ✓  (S06, 2026-07-12)
-KM Domain Expansion             →  (S07, 2026-07-12, Step 1 + 1.5 complete)
+System Reorientation            ✓  (S07, 2026-07-12, Steps 1-3 complete)
   ├── Emergent Organization     ✓  concepts/ 第三概念页
   ├── Growth Boundary Class.    ✓  Type A/B/C 三级分类建立
-  └── Map of Content (MOC)      →  等待 Human 确认 (methods/ 首个页面, Type B)
+  ├── Map of Content (MOC)      ✓  methods/ 首个页面, Type B→live
+  └── Closure & Stabilization   ✓  Schema 修复, Foundation Complete 声明
 ```
 
 ---
@@ -236,10 +244,12 @@ status: growing → evergreen (需人类批准)
 | 维度 | 状态 | 详情 |
 |------|------|------|
 | Concept pages | 3 | Note Atomicity (principle-type) + Zettelkasten Method (method-type) + Emergent Organization (result-type) |
-| Internal wikilinks | 3 live | note-atomicity ↔ zettelkasten-method, note-atomicity → emergent-organization, zettelkasten-method → emergent-organization |
-| Taxonomy consistency | ✅ | 三个页面均以理解姿态编写，符合 concepts/ 定位。Emergent Organization 描述涌现现象（WHAT EMERGES），非操作方法 |
-| Principle→Method→Result chain | ✅ | Note Atomicity (WHAT) → Zettelkasten Method (HOW) → Emergent Organization (WHAT EMERGES) 完整推导链 |
-| Domain→Master backlinks | 6 | 3 pages × 2 Master Concepts，双向可追溯 |
+| Method pages | 1 | Map of Content — curation method for emergent knowledge structures |
+| Internal wikilinks | 12 live | Full bidirectional network across 4 pages. Principle → Method → Result → Curation chain closed |
+| Taxonomy consistency | ✅ | Concepts in concepts/ (understanding stance), Method in methods/ (execution stance). MOC validates taxonomy flow |
+| Principle→Method→Result→Curation chain | ✅ | Note Atomicity (WHAT) → Zettelkasten Method (HOW to link) → Emergent Organization (WHAT EMERGES) → Map of Content (HOW to curate). Complete lifecycle |
+| Domain→Master backlinks | 5 | 5 KM→Master backlinks: 3 concepts × 2 Master + 1 method × 1 Master. Bidirectional traceability maintained |
+| Growth Boundary health | ✅ | 0 Type A, 0 Type B (MOC created), 1 Type C (Digital Garden). No unresolved network-required nodes |
 
 ### 验证结论
 
@@ -333,28 +343,24 @@ S05 Cross-Domain Abstraction 的核心目标已达成：
 4. **KM Taxonomy Stabilization**：5 个知识类型的认知姿态定义（理解/执行/使用/引用/识别），concepts vs methods 边界澄清
 5. **Master Wiki Construction**：2 个 Master Concept 创建，Master Wiki 从空壳进入 Activated 状态
 
-### 当前焦点：S07 Step 1 + Step 1.5 完成，Step 2 等待确认
+### 当前焦点：S07 Complete — System Reorientation 完成
 
-S07 Step 1 全部交付物已完成：
-- Emergent Organization concept 创建（`spaces/knowledge-management/wiki/concepts/emergent-organization.md`）
-- KM Domain Principle → Method → Result 推导链建立（3 concepts）
-- Reference synchronization：note-atomicity.md 和 zettelkasten-method.md 中 "(page planned)" 引用更新为 live wikilinks
-- Domain index、log、document-map、project-state 全部同步
-- Lint 验证通过（0 broken links, 0 orphans, 0 regressions）
+S07 全部三步已执行完毕：
 
-S07 Step 1.5 全部交付物已完成：
-- Growth Boundary Classification 三级体系建立（Type A/B/C）
-- `knowledge-linking.md` §5 新增完整定义、决策矩阵、marker→类型映射
-- 全部 planned reference 重新分类：
-  - MOC: `(page planned)` → `(page required)` [Type B — 3 concept pages + schema 同步]
-  - Digital Garden: `(page planned)` → `(page candidate)` [Type C — 3 concept pages + schema 同步]
-  - AI deferred candidates: `planned` → `candidate` [Type C — index 同步]
-- KM Schema 同步：Emergent Organization 移至 existing，MOC 移至 Methods/ required
-- `docs/project-state.md` 新增 D9 设计决策
-- `docs/session-snapshot.md` 同步更新
+**Step 1 — Emergent Organization**: KM Domain 第三概念页创建。Principle → Method → Result 推导链建立。跨 Note Atomicity + Zettelkasten Method 双源合成。
 
-S07 Step 2 候选：
-- Map of Content (MOC) 作为 methods/ 首个页面（Type B — 需 Human 批准）
+**Step 1.5 — Growth Boundary Classification**: Type A/B/C 三级增长分类建立并集成到 knowledge-linking.md §5。全部 planned reference 重新分类。Type B 标记建立（MOC → page required）。
+
+**Step 2 — MOC Integration & Curation Layer**: KM Domain 首个 methods/ 页面创建（map-of-content.md）。三个概念页的 3 条 Type B (page required) 标记转为 live wikilinks。Principle → Method → Result → Curation 推导链闭合。Lint 验证通过：0 errors, 0 warnings。
+
+**Step 3 — Closure & Stabilization**: KM schema 修复（MOC 从 planned 移至 existing）。KM Domain 声明为 **Foundation Complete, Pull-based Growth**。S07 阶段关闭。
+
+KM Domain 当前状态：
+- 4 pages: 3 concepts (all seedling) + 1 method (seedling)
+- Complete chain: Note Atomicity → Zettelkasten Method → Emergent Organization → MOC
+- 0 Type A, 0 Type B, 1 Type C (Digital Garden)
+- 12 intra-domain live wikilinks, 5 KM→Master backlinks
+- All pages seedling — organic growth expected through use, not forced promotion
 
 ### S06 Infrastructure Closure
 
@@ -391,6 +397,15 @@ Repository infrastructure stabilized:
 | 分类写入 knowledge-linking.md §5 | 增长边界规则作为链接协议的正式组成部分 | 不创建新 protocol 文件，符合 Avoid Protocol Proliferation |
 | MOC 标记为 Type B (weak form) | 实践闭合层缺失（非理论理解层） | 弱形式 Type B 仍是 Type B——需要 Human 批准，但紧急度低于强形式 |
 | Digital Garden + AI deferred → Type C | 所有 speculative 引用统一降级 | 语义精度提升：planned ≠ required ≠ candidate |
+
+### S07 Step 2 关键决策记录
+
+| # | 决策 | 影响 |
+|---|------|------|
+| MOC 置入 methods/（非 concepts/） | MOC 的本质是操作流程（HOW to curate），非概念理解（WHAT is curation） | 验证 taxonomy 的 concepts/ → methods/ 流动。concepts/ 已有三个页面完整描述了 MOC 的概念本质，methods/ 提供操作层 |
+| MOC 的 descriptive-not-prescriptive 性质 | MOC 描述已涌现的结构，不预设知识应该属于哪里 | 将 MOC 从"一种组织方法"重新定位为"对涌现结构的策展操作"，使方法论基础从分类转向观察和策展 |
+| MOC → emergent-structure-from-local-interactions (Master) | 方法 → 概念 的操作化映射（abstract mechanism → operational method），非证据提供 | 新增第 13 条 KM→Master backlink，不同于 concepts/ 的 "provides evidence for" 语义——这是 "operationalization of" |
+| KM Domain Foundation Complete 声明 | 4-page 理论链闭合，0 Type B remaining，pull-based growth rule 生效 | KM Domain 从 Active Expansion 转入 Maintenance / Pull-based Growth 模式。未来扩展由 capture 或 human 决策驱动，非 agent 自主扩展 |
 
 ---
 
@@ -440,22 +455,24 @@ Repository infrastructure stabilized:
 
 ## 8. Next Recommended Actions
 
-基于 S07 Step 1 + Step 1.5 完成后的项目状态，推荐以下步骤：
+S07 System Reorientation 已完成。系统处于稳定等待状态。
 
-### 优先级 1: S07 Step 2 — MOC 创建（需 Human 批准）
+### 短期（等待 Human 方向）
 
-1. **Map of Content (MOC)** — 创建 `spaces/knowledge-management/wiki/methods/map-of-content.md`，作为 KM Domain 首个 methods/ 页面。Type B (network-required, weak form)。验证 taxonomy 的 concepts/ → methods/ 流动。
+1. **Digital Garden** — Type C (speculative candidate)。4 个页面引用，最自然的 KM Domain 下一步扩展。需要 Human 确认或 external capture 触发。
+2. **KM Domain seedling → growing** — 当前 4 页全部 seedling。通过实际使用和 `/update` 周期自然提升，不建议强制 promotion。
 
-### 优先级 2: Reference cleanup（MOC 创建后）
+### 中期（取决于 Human 方向）
 
-2. **批量更新 references** — MOC 创建后，更新 note-atomicity.md、zettelkasten-method.md、emergent-organization.md 中 `(page required)` 引用为 live wikilinks，清理 TODO 条目。
+3. **AI Domain deferred candidates** — Type C，当 capture 触发时创建（pull-based only）
+4. **Cross-domain pattern mining** — S08 候选：AI↔KM 新增模式检测（MOC↔RAG retrieval strategy 结构类比等）
+5. **System governance review** — 7 个 protocol 一致性审查，documentation drift 检查
 
-### 后续（不紧急）
+### 长期（不紧急）
 
-3. **Digital Garden** — Type C (speculative candidate)，需 Human 确认或 future capture 触发
-4. **AI Domain deferred candidates** — Type C，当 capture 触发时创建（pull-based only）
-5. 其他 domain template 蒸馏标准扩展（D3）
-6. `/lint` 蒸馏质量检查规则（D4）
+6. 其他 domain template 蒸馏标准扩展（D3）
+7. `/lint` 蒸馏质量检查规则（D4）
+8. 系统综合页面的 lifecycle 评估标准写入 protocol（D7）
 
 ---
 
