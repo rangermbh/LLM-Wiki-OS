@@ -422,6 +422,7 @@ Repository infrastructure stabilized:
 | D7 | 系统综合页面的 lifecycle 评估标准 | 待决定 | vector-embeddings 和 transformer-architecture 无 capture source（系统综合创建）。`knowledge-lifecycle.md` seedling→growing 的"source capture referenced"条件对此类页面不适用。当前用"网络集成度 + 多概念依赖"替代，但协议未显式覆盖此边缘案例 |
 | D8 | Master Concepts 的分类位置 | 已记录 | 两个 Pattern 均放在 concepts/ 而非 principles/。当前决策：Master Wiki 以概念网络为核心构建。未来可在 principles/ 中创建应用导向的版本。此决策待更多 Master 内容后重新评估 |
 | D9 | Domain→Master backlinks | ✅ 已解决 | S06 中已为 6 个 Domain source pages 添加 12 条 backlink（2 Master Concepts × 6 pages），使用 `### Master Concepts` 小节 + `provides evidence for` 语义。Domain↔Master 双向可追溯性已建立 |
+| D10 | Structured Management Layer | 已记录（Deferred） | 2026-07-12 记录为 Type C 改进候选。评估 Obsidian Database 作为 Structured Management Layer 的可能性。等待触发信号。详见 `docs/project-state.md` §11 I1 |
 
 ---
 

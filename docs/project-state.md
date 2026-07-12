@@ -253,3 +253,20 @@ Gitee 限制：
 
 1. 在 GitHub 上创建 tag
 2. 在 Gitee 上触发手动 Pull Sync
+
+---
+
+## 11. Deferred Improvements
+
+已记录但当前不实施的改进候选项。按 S07 Growth Boundary Classification 标记类型。
+
+| # | Item | Type | Description | Trigger Signal |
+|---|------|------|-------------|----------------|
+| I1 | Structured Management Layer Evaluation | Type C | 评估 Obsidian Database 等结构化能力作为 Wiki Graph Layer 的互补层。用于 Projects、Courses、Research papers、Tasks 等具有明确生命周期和状态的对象。Wiki Graph Layer 保留 concepts/methods/relationships，Structured Management Layer 管理 entities/status/lifecycle。两者互补，非替代。 | 高频项目管理需求 / 教学资源生命周期管理 / 科研对象状态跟踪 / Entity 管理需求增长 |
+
+### I1 详细约束
+
+- 禁止将 concepts/ 或 methods/ 转换为数据库表
+- 禁止用 metadata table 替代 semantic graph
+- 禁止因数据库能力引入而创建新 protocol
+- 保持观察状态，等待触发信号
