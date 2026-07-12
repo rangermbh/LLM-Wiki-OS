@@ -204,3 +204,46 @@ Agent never redefines the human's worldview automatically. When uncertain, the a
 - 未来多语言扩展架构
 
 核心原则不变：系统标识符保持英文（机器可读契约），知识页面中文为主（技术术语保留英文）。
+
+---
+
+## 10. Repository Governance
+
+### Primary Repository
+
+| 属性 | 值 |
+|------|------|
+| 平台 | GitHub |
+| 仓库 | rangermbh/LLM-Wiki-OS |
+| 角色 | Development source of truth |
+
+### Mirror Repository
+
+| 属性 | 值 |
+|------|------|
+| 平台 | Gitee |
+| 仓库 | LLM-Wiki-OS |
+| 角色 | Accessibility and backup mirror |
+
+### Synchronization
+
+| 属性 | 值 |
+|------|------|
+| 方向 | GitHub → Gitee |
+| 模式 | Manual Pull Sync |
+
+### Development Rule
+
+**GitHub only development** — 所有开发活动（commit、branch、PR、review）仅在 GitHub 进行。
+
+Gitee 限制：
+- 无直接 commit
+- 无 feature 开发
+- 无分支管理
+
+### Milestone Sync
+
+在每个稳定里程碑完成后：
+
+1. 在 GitHub 上创建 tag
+2. 在 Gitee 上触发手动 Pull Sync

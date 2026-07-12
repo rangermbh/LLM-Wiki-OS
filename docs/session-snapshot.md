@@ -338,6 +338,15 @@ S06 全部交付物已完成：
 - 首次结构 lint（0 broken links, 0 orphan knowledge pages）
 - Document-map 同步更新
 
+### S06 Infrastructure Closure
+
+Repository infrastructure stabilized:
+
+- GitHub established as primary repository (development source of truth)
+- Gitee configured as manual pull mirror (accessibility and backup)
+- Single source of truth defined (GitHub only development, Gitee read-only mirror)
+- Milestone sync workflow: GitHub tag → Gitee manual Pull Sync
+
 ### S06 关键决策记录
 
 | # | 决策 | 影响 |
