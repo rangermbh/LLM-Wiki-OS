@@ -117,7 +117,7 @@ These decisions are settled. Do not reopen without explicit human request.
 
 | Component | Detail |
 |-----------|--------|
-| Git repository | Initialized, 5 commits |
+| Git repository | Initialized, 24 commits |
 | Directory structure | 27 directories, all layers present |
 | CLAUDE.md | Operating Constitution v2, 516 lines |
 | FEDERATION.md | Members, governance, authority model |
@@ -193,9 +193,10 @@ Phase 演进：
 | `93bbed2` | update: add MOC curation method layer to KM Domain |
 | `e2b1fcb` | maintenance: close S07 stabilization and declare KM foundation complete |
 | `a2c9b07` | maintenance: record Structured Management Layer as deferred improvement (Type C) |
+| `12da602` | reflect: S09 strategic redefinition — Personal Intelligence Support System |
 
 Branch: `master`. Remote: `origin` (GitHub). Mirror: Gitee (manual pull).
-Last synchronized: 2026-07-12 (S08 Step 2)
+Last synchronized: 2026-07-13 (S09 Closure)
 
 ---
 
