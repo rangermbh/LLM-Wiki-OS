@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11
-updated: 2026-07-12T23:59
+updated: 2026-07-13
 status: active
 ---
 
@@ -96,17 +96,17 @@ Sources: Obsidian Web Clipper, manual markdown, PDF exports, AI conversations, o
 
 These decisions are settled. Do not reopen without explicit human request.
 
-| # | Decision | Rationale |
-|---|----------|-----------|
-| D1 | Master is not a knowledge index | Master stores only cross-domain abstractions. Domain indices handle knowledge lookup. |
-| D2 | Domain is specialized knowledge space | Each domain is self-contained with its own schema, index, and wiki structure. |
-| D3 | No physical isolation between domains | All domains live under `spaces/` in a single Git repo. Federation is logical, not physical. |
-| D4 | Git as evolution history | Every knowledge change is versioned. Commit types (capture/update/reflect/promote/maintenance) encode the nature of each change. |
-| D5 | Human has final cognitive authority | Agent proposes, analyzes, and prepares. Human decides. Master Wiki changes always require human approval. |
-| D6 | Raw content is never modified | Captures in `inbox/` are immutable sources of truth. Only frontmatter metadata may be updated. |
-| D7 | Agent prefers update over create | Before creating a new wiki page, the agent must search for existing pages that can be updated instead. |
-| D8 | 5 knowledge types per domain | concepts, methods, technologies, references, entities — each with its own template and wiki subdirectory. |
-| D9 | Growth Boundary Classification | Three types for missing concept references: Type A — Capture-driven (page planned, Agent may execute), Type B — Network-required (page required, Agent proposes + Human approves), Type C — Speculative Candidate (page candidate, Human confirmation or future capture). Defined in knowledge-linking.md §5. |
+| #   | Decision                                                     | Rationale                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| --- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| D1  | Master is not a knowledge index                              | Master stores only cross-domain abstractions. Domain indices handle knowledge lookup.                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| D2  | Domain is specialized knowledge space                        | Each domain is self-contained with its own schema, index, and wiki structure.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| D3  | No physical isolation between domains                        | All domains live under `spaces/` in a single Git repo. Federation is logical, not physical.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| D4  | Git as evolution history                                     | Every knowledge change is versioned. Commit types (capture/update/reflect/promote/maintenance) encode the nature of each change.                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| D5  | Human has final cognitive authority                          | Agent proposes, analyzes, and prepares. Human decides. Master Wiki changes always require human approval.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| D6  | Raw content is never modified                                | Captures in `inbox/` are immutable sources of truth. Only frontmatter metadata may be updated.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| D7  | Agent prefers update over create                             | Before creating a new wiki page, the agent must search for existing pages that can be updated instead.                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| D8  | 5 knowledge types per domain                                 | concepts, methods, technologies, references, entities — each with its own template and wiki subdirectory.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| D9  | Growth Boundary Classification                               | Three types for missing concept references: Type A — Capture-driven (page planned, Agent may execute), Type B — Network-required (page required, Agent proposes + Human approves), Type C — Speculative Candidate (page candidate, Human confirmation or future capture). Defined in knowledge-linking.md §5.                                                                                                                                                                                                                                       |
 | D10 | Strategic Redefinition: Personal Intelligence Support System | S09 Strategic Sync. LLM Wiki OS long-term goal redefined from Knowledge Management System to Personal Intelligence Support System. Core value: connect world knowledge, personal experience, and continuous reflection → better cognition → improved decisions. AI role: Cognitive Companion (Remember, Connect, Challenge, Reflect, Support). Human retains Goal/Cognition/Decision Ownership. Boundaries: NOT Profile System, Life OS, Everything OS, or AI Decision Maker. Principle: Support Human Intelligence, Never Replace Human Cognition. |
 
 ---
@@ -134,7 +134,7 @@ These decisions are settled. Do not reopen without explicit human request.
 
 | Component | Detail |
 |-----------|--------|
-| — | *No active work. S09 Strategic Sync complete. Awaiting S10 direction.* |
+| S09 Post-Freeze Observation | Active observation period. Architecture Freeze in effect. Observing system value through real use. |
 
 ### Completed Since Last Update
 
@@ -146,25 +146,22 @@ These decisions are settled. Do not reopen without explicit human request.
 | S08 Step 2 Governance Synchronization | project-state.md (Sections 4/5/6), session-snapshot.md (Sections 1/5/8), document-map.md (Section 7) synchronized. Section 6 vs 10 evaluation: remain separate. 10/10 consistency checks passed. Report: `reports/S08-Governance-Synchronization.md` |
 | S08 Closure | Phase complete. S08 closed. Reports archived. |
 | S09 Strategic Sync | Long-term vision redefined: Personal Intelligence Support System. AI role: Cognitive Companion. Strategic boundaries established. Design Decision D10 recorded. |
+| S09 Foundational Review | Karpathy LLM Wiki foundational source analysis. Observation report: `reports/S09-foundational-review-karpathy.md`. System relationship defined: seed pattern → emergent paradigm. |
+| S09 Observation Log | Post-Freeze Observation Period established. Observation log created: `reports/S09-observation-log.md`. Architecture Freeze in effect. |
 
 ### Not Yet Started
 
 | Component | Detail |
 |-----------|--------|
-| S08 Steps 3+ | 待 Human 决定 S08 后续步骤 |
-| Digital Garden | Type C (speculative candidate)，需 Human 确认或 future capture 触发 |
+| — | *Architecture Freeze. No planned work. Evolution gated on observation evidence.* |
 
 ---
 
 ## 5. Current Phase
 
-**Phase**: S09 Strategic Sync — **Complete.** Long-term vision redefined: Personal Intelligence Support System. Strategic direction recorded. No implementation.
+**Phase**: S09 Post-Freeze Observation Period — **Active.** Architecture Freeze in effect. All layers stable. Observing system value through real use. No implementation, no architecture expansion.
 
-AI Domain: Phase 1 Frozen (4 concepts, Pull-based Growth). KM Domain: Foundation Complete (3 concepts + 1 method, Pull-based Growth). Master Wiki: Activated (2 concepts + governance).
-
-Domain→Master backlink 网络完整（13 条双向链路：5 KM + 8 AI）。KM Domain Principle → Method → Result → Curation 推导链已闭合。Growth Boundary 三级分类 (Type A/B/C) 已建立。0 Type A, 0 Type B, 1 Type C (Digital Garden)。Lint 通过（0 broken links, 0 orphans）。S08 Step 1 健康审查通过：AI Domain 4 节点网络稳定，freeze 维持。
-
-Next milestone: S10 方向确定（待 Human 决定）。Strategic foundation laid — future work explores Knowledge → Reflection → Cognition path.
+Next milestone: None scheduled. Evolution gated on observation evidence.
 
 Phase 演进：
 1. ~~Architecture Building~~ ✓ (2026-07-11)
@@ -177,6 +174,7 @@ Phase 演进：
 8. **S07: System Reorientation** ✓ (2026-07-12, Steps 1-3 complete: Emergent Organization + Growth Boundary + MOC Integration + Closure。KM Domain Foundation Complete, Pull-based Growth)
 9. **S08: AI Domain Health Review** ✓ (2026-07-12, Steps 1-3 complete: Health Review + Governance Synchronization + Closure。AI Domain freeze 维持，governance docs 同步)
 10. **S09: Strategic Sync** ✓ (2026-07-12, Strategic Redefinition: Personal Intelligence Support System。Long-term vision recorded, no implementation)
+11. **S09 Post-Freeze Observation Period** → (2026-07-13, Architecture Freeze。Observing system value through real use。Evolution gated on evidence)
 
 ---
 
@@ -194,9 +192,11 @@ Phase 演进：
 | `e2b1fcb` | maintenance: close S07 stabilization and declare KM foundation complete |
 | `a2c9b07` | maintenance: record Structured Management Layer as deferred improvement (Type C) |
 | `12da602` | reflect: S09 strategic redefinition — Personal Intelligence Support System |
+| `80cb0c9` | capture: add Karpathy LLM Wiki as foundational source for S09 observation |
+| `7055ead` | update: relocate Karpathy LLM Wiki to foundation directory |
 
 Branch: `master`. Remote: `origin` (GitHub). Mirror: Gitee (manual pull).
-Last synchronized: 2026-07-13 (S09 Closure)
+Last synchronized: 2026-07-13 (S09 Post-Freeze Observation)
 
 ---
 

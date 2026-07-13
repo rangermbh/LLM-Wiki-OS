@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11
-updated: 2026-07-12T23:59
+updated: 2026-07-13
 status: active
 ---
 
@@ -208,6 +208,8 @@ Master Wiki 不是知识索引——它只存储跨领域抽象。
 | `reports/S08-AI-Domain-Health-Review.md` | S08 Step 1: AI Domain 健康审查报告（topology、maturity、growth boundary、candidate evaluation） |
 | `reports/S08-Governance-Synchronization.md` | S08 Step 2: Governance 同步报告（project-state、session-snapshot、document-map 同步） |
 | `reports/S08-Closure.md` | S08 Closure: 阶段关闭记录（final decisions、system state、phase evolution） |
+| `reports/S09-observation-log.md` | S09 Post-Freeze Observation Log: 系统演化观察记录（observations、risks、hypotheses、periodic review） |
+| `reports/S09-foundational-review-karpathy.md` | S09 Foundational Review: Karpathy LLM Wiki 基础来源回溯分析（source context、alignment、divergence、evolution signals） |
 
 ### `docs/` — 集成审计报告
 
