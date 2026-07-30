@@ -1,6 +1,6 @@
 ---
 created: 2026-07-12
-updated: 2026-07-13
+updated: 2026-07-30
 status: active
 ---
 
@@ -26,8 +26,8 @@ KM Domain 状态：**Foundation Complete, Pull-based Growth**（4 pages: 3 conce
 
 ```
 Master Wiki:   Activated (2 concepts + governance — 治理框架已建立)
-Domain Wikis:  AI (4 concepts, Phase 1 Frozen) + KM (3 concepts + 1 method, Foundation Complete, Pull-based Growth)
-Capture Layer: 4 captures processed, inbox clean
+Domain Wikis:  AI (4 concepts, Phase 1 Frozen) + KM (3 concepts + 1 method, Foundation Complete, Pull-based Growth) + Vocational Education (2 concepts + 1 reference, Bootstrap Complete, Observation)
+Capture Layer: 5 captures processed, inbox clean
 ```
 
 阶段演进路径：
@@ -351,6 +351,7 @@ Architecture Freeze 生效。当前处于 S09 Post-Freeze Observation Period。�
 **当前活动**：
 - S09 Foundational Review: Karpathy LLM Wiki 基础来源回溯分析完成。报告：`reports/S09-foundational-review-karpathy.md`
 - S09 Observation Log: 观察日志已建立。`reports/S09-observation-log.md`
+- Vocational Education Domain Bootstrap (2026-07-30): 新 Domain 已激活。2 bootstrap seed concepts (industry-education integration, teaching key elements) + 1 policy reference。Domain schema、index、log 已创建。FEDERATION、document-map、protocol/domain-routing 已同步。Domain 处于 Bootstrap Complete, Observation 状态。
 
 **当前约束**：
 - 禁止创建新 Layer、Module、Protocol、Architecture

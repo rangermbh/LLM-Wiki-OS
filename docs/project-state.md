@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11
-updated: 2026-07-13
+updated: 2026-07-30
 status: active
 ---
 
@@ -81,6 +81,7 @@ Current domains:
 |--------|------|-------|
 | AI | `spaces/ai/` | ML, DL, NLP, LLMs, AI alignment, AI safety |
 | Knowledge Management | `spaces/knowledge-management/` | PKM, Obsidian workflows, LLM-assisted knowledge, information organization |
+| Vocational Education | `spaces/vocational-education/` | Vocational education theory, policy, reform, talent cultivation, curriculum, AI in vocational education |
 
 Each domain has: `schema.md`, `index.md`, `log.md`, `raw/`, `wiki/` (with 5 knowledge types: concepts, methods, technologies, references, entities), `sources/`.
 
@@ -117,14 +118,14 @@ These decisions are settled. Do not reopen without explicit human request.
 
 | Component | Detail |
 |-----------|--------|
-| Git repository | Initialized, 24 commits |
+| Git repository | Initialized, 29 commits |
 | Directory structure | 27 directories, all layers present |
 | CLAUDE.md | Operating Constitution v2, 516 lines |
 | FEDERATION.md | Members, governance, authority model |
 | Protocol docs | 6 documents (federation, git convention, metadata schema, domain routing, knowledge lifecycle, knowledge distillation) |
 | Templates | 10 templates (1 raw + 5 domain + 4 master) |
 | Commands | 5 commands (ingest, update, lint, promote, reflect) |
-| Domains | 2 domains (AI, Knowledge Management) |
+| Domains | 3 domains (AI, Knowledge Management, Vocational Education) |
 | Master Wiki | 4 categories, schema, index, 2 concepts (activated) |
 | Obsidian integration | Vault configured, 14 core plugins enabled, wikilinks, frontmatter |
 | .gitignore | Obsidian workspace, OS files, temp files excluded |
@@ -148,6 +149,7 @@ These decisions are settled. Do not reopen without explicit human request.
 | S09 Strategic Sync | Long-term vision redefined: Personal Intelligence Support System. AI role: Cognitive Companion. Strategic boundaries established. Design Decision D10 recorded. |
 | S09 Foundational Review | Karpathy LLM Wiki foundational source analysis. Observation report: `reports/S09-foundational-review-karpathy.md`. System relationship defined: seed pattern → emergent paradigm. |
 | S09 Observation Log | Post-Freeze Observation Period established. Observation log created: `reports/S09-observation-log.md`. Architecture Freeze in effect. |
+| Vocational Education Domain Bootstrap | New domain activated: `spaces/vocational-education/`. 2 bootstrap seed concepts (industry-education integration, teaching key elements) + 1 policy reference. Domain schema, index, and log created. FEDERATION, document-map, protocol/domain-routing synchronized. |
 
 ### Not Yet Started
 
@@ -194,9 +196,11 @@ Phase 演进：
 | `12da602` | reflect: S09 strategic redefinition — Personal Intelligence Support System |
 | `80cb0c9` | capture: add Karpathy LLM Wiki as foundational source for S09 observation |
 | `7055ead` | update: relocate Karpathy LLM Wiki to foundation directory |
+| `fd05c77` | docs: transition to S09 post-freeze observation period |
+| `2860b8b` | update: bootstrap vocational-education domain with seed concepts and policy capture |
 
 Branch: `master`. Remote: `origin` (GitHub). Mirror: Gitee (manual pull).
-Last synchronized: 2026-07-13 (S09 Post-Freeze Observation)
+Last synchronized: 2026-07-30
 
 ---
 
