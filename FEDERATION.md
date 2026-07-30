@@ -26,6 +26,7 @@ This is the **LLM Wiki Federation** — a personal knowledge operating system or
 |--------|------|--------|-------|
 | AI | `spaces/ai/` | active | Artificial Intelligence, ML, DL, NLP, LLMs, AI Safety |
 | Knowledge Management | `spaces/knowledge-management/` | active | PKM, Obsidian workflows, LLM-assisted knowledge, information organization |
+| Vocational Education | `spaces/vocational-education/` | active | Vocational education theory, policy, reform, talent cultivation, curriculum, AI in vocational education |
 
 ## Governance
 

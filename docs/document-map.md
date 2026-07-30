@@ -145,6 +145,16 @@ spaces/
 │       ├── references/           # 知识管理参考文献
 │       └── entities/             # 知识管理实体（人物/社区）
 └── (future domains...)           # 未来可扩展更多领域
+├── vocational-education/            # 职业教育领域 Wiki
+│   ├── schema.md                 # 领域结构定义
+│   ├── index.md                  # 领域知识索引
+│   ├── log.md                    # 领域操作日志
+│   └── wiki/
+│       ├── concepts/             # 职业教育概念
+│       ├── methods/              # 职业教育方法
+│       ├── technologies/         # 职业教育技术
+│       ├── references/           # 职业教育参考文献（1 page）
+│       └── entities/             # 职业教育实体（人物/组织/项目）
 ```
 
 ### Master Wiki（Activated · 2 concepts · 1 governance）
@@ -184,6 +194,20 @@ KM Domain 已激活，Principle → Method → Result 推导链已建立。
 | [[spaces/knowledge-management/wiki/methods/map-of-content\|Map of Content (MOC)]] | Method | 策展方法：识别涌现主题集群并创建导航入口，使涌现结构对人可见可用 |
 
 **拓扑**：`Note Atomicity (Principle) → Zettelkasten Method (Method) → Emergent Organization (Result) → MOC (Curation)`
+
+### Vocational Education Domain（Bootstrap · 2 concepts · 1 reference）
+
+Vocational Education Domain 于 2026-07-25 引导创建，首个页面为奠基性政策参考文献。两个 Bootstrap Seed Concepts 由领域研究者确认创建。
+
+| 页面 | 类型 | 说明 |
+|------|------|------|
+| [[spaces/vocational-education/wiki/concepts/industry-education-integration\|产教融合]] | Concept (Seed) | 产业与教育系统深度耦合的核心机制概念，以产定教、以产引教、以产改教、以产促教 |
+| [[spaces/vocational-education/wiki/concepts/teaching-key-elements\|教学关键要素]] | Concept (Seed) | 五要素联动系统：专业→课程→教材→教师→实习实训的传递链与闭环 |
+| [[spaces/vocational-education/wiki/references/2026-vocational-education-teaching-reform-policy\|职业教育教学关键要素改革（2026）]] | Reference | 教育部教职成〔2026〕1号：教学关键要素改革框架 |
+
+**拓扑**：`产教融合 ⇄ 教学关键要素`，两者均引用 `改革政策（2026）` 作为来源之一。
+
+**状态**：Bootstrap — 2 seed concepts (growing) + 1 reference，methods/technologies/entities 目录待填充。
 
 每条领域自包含：有自己的 schema、index、log 和 5 种知识类型的 wiki 子目录。
 
@@ -268,6 +292,7 @@ Master Wiki 不是知识索引——它只存储跨领域抽象。
 | 创建新 wiki 页面 | `templates/` （选择对应模板） |
 | 查看 AI Domain 知识网络 | `spaces/ai/index.md` |
 | 查看 KM Domain 知识 | `spaces/knowledge-management/index.md` |
+| 查看 Vocational Education Domain 知识 | `spaces/vocational-education/index.md` |
 | 查看系统健康报告 | `reports/` |
 | 查看集成审计 | `docs/SYSTEM_INTEGRATION_AUDIT.md`、`docs/POST_FIX_VALIDATION.md` |
 | 查看验证历史与待决问题 | `docs/session-snapshot.md` |

@@ -40,6 +40,7 @@ domain
 |--------|-------|----------|------------|
 | AI | Artificial Intelligence | ML, deep learning, NLP, computer vision, RL, LLMs, AI alignment, AI safety, prompt engineering, neural networks, transformers, diffusion models, AGI | Software engineering unrelated to AI, hardware without AI context, AI business without technical content |
 | Knowledge Management | Personal Knowledge Management | PKM, Obsidian, note-taking, Zettelkasten, PARA, MOC, digital garden, knowledge graph, information architecture, spaced repetition, progressive summarization | Enterprise KM, library science (unless personal), database design |
+| Vocational Education | Vocational education theory, policy, and practice | Vocational education, education reform, education policy, talent cultivation, curriculum development, industry-education integration, teacher development, apprenticeship, skilled workforce, AI in education | General K-12 education, higher education theory without vocational focus, corporate training (unless vocational-system) |
 
 ### Boundary Zones (Overlap)
 

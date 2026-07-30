@@ -1,5 +1,4 @@
 
-
 ## LLM Wiki OS — Post-Freeze Observation Period
 
 **Status:** Active Observation  
@@ -381,7 +380,7 @@ Architecture Second
 
 ---
 
-# 7. Initial Observations
+# 7.  Observation log
 
 ---
 
@@ -494,6 +493,373 @@ Strategic Hypothesis。
 
 ---
 
+# Observation 04 — External Knowledge Ingestion Boundary
+
+Date:
+
+2026-07-13
+
+Status:
+
+Observed
+
+---
+
+## Context
+
+首次尝试将 Claude Code 学习资源引入 LLM Wiki OS。
+
+学习过程中涉及：
+
+- 官方文档；
+- GitHub 教程（claude-howto）；
+- Web Clipper；
+- 外部资料管理。
+
+讨论重点逐渐从：
+
+> 「资源应该放在哪个目录？」
+
+转变为：
+
+> 「系统如何理解不同类型的知识进入方式？」
+
+---
+
+## Situation
+
+真实使用过程中发现：
+
+知识摄入并不存在唯一流程。
+
+目前至少观察到两种模式：
+
+### Pattern A — Discovery-driven
+
+浏览过程中发现可能有价值的信息。
+
+通常通过 Capture 保存。
+
+之后再决定是否进一步处理。
+
+---
+
+### Pattern B — Intent-driven
+
+已有明确学习目标。
+
+主动寻找学习资源。
+
+经过初步筛选后进入学习。
+
+不一定经过典型 Capture 流程。
+
+---
+
+同时观察到：
+
+Claude Code GitHub Repository 不会整体进入系统。
+
+真正进入系统的是：
+
+- Concepts
+- Methods
+- Practices
+- Workflow
+- Personal Understanding
+
+而不是：
+
+整个 Repository。
+
+---
+
+## Evidence
+
+目前证据来自：
+
+Claude Code 学习案例。
+
+尚未覆盖：
+
+- Paper
+- Book
+- Course
+- Daily Reading
+- Research Workflow
+
+因此：
+
+证据范围有限。
+
+---
+
+## Signal
+
+Capture、Raw、Source
+
+可能描述的是不同维度，
+
+而不是固定流水线。
+
+Knowledge Ingestion Boundary
+
+值得持续观察。
+
+---
+
+## Alternative Explanation
+
+当前案例属于：
+
+目标明确的系统化学习。
+
+其它知识来源
+
+可能形成不同摄入模式。
+
+目前不足以建立统一 Ingestion Model。
+
+---
+
+## Impact
+
+当前没有证据支持：
+
+- 修改目录结构；
+- 增加 Layer；
+- 调整知识生命周期。
+
+---
+
+## Decision
+
+Continue Observation
+
+持续观察：
+
+- Capture 是否形成稳定用途；
+- Raw 是否自然形成边界；
+- Source 是否需要独立存在；
+- 不同学习模式是否形成稳定摄入模式。
+
+---
+
+# Observation 05 — Observation Before Architecture
+
+Date:
+
+2026-07-13
+
+Status:
+
+Observed
+
+---
+
+## Context
+
+讨论起点为：
+
+> 「Claude Code 教程应该放在哪里？」
+
+随后逐渐延伸至：
+
+- Capture
+- Raw
+- Source
+- Notes
+
+等潜在系统设计问题。
+
+---
+
+## Situation
+
+讨论最终没有产生：
+
+- 新目录；
+- 新 Layer；
+- 新工作流。
+
+真正得到的是：
+
+多个需要继续验证的观察问题。
+
+---
+
+## Evidence
+
+整个讨论过程中，
+
+没有出现：
+
+- 重复发生的问题；
+- 持续价值损失；
+- 明确工作流阻塞。
+
+因此：
+
+缺乏支持系统演化的证据。
+
+---
+
+## Signal
+
+本次讨论验证：
+
+S09 Observation Principle
+
+开始真正影响讨论方式。
+
+能够区分：
+
+> 「观察到系统边界」
+
+与
+
+> 「系统需要演化」
+
+是两件不同事情。
+
+---
+
+## Alternative Explanation
+
+未来如果：
+
+同类问题持续出现，
+
+并明显影响知识使用，
+
+仍可能成为系统演化信号。
+
+当前：
+
+尚未达到该程度。
+
+---
+
+## Impact
+
+降低：
+
+Build Mode 思维惯性。
+
+避免：
+
+由单一案例直接推动系统设计。
+
+---
+
+## Decision
+
+Continue Observation
+
+坚持：
+
+```
+Need First
+
+Architecture Second
+```
+
+# Observation 06 — Domain Template Should Be Derived from Validated Design Decisions
+
+Date:
+
+2026-07-25
+
+Status:
+
+Confirmed
+
+---
+
+## Context
+
+在准备创建第三个 Domain（Vocational Education Research）之前，对现有 AI Domain 和 Knowledge Management Domain 的结构进行了回顾，希望确认当前 Domain Architecture 是否已经可以抽象为可复用的 Domain Template。
+
+讨论过程中，同时重新阅读了 Andrej Karpathy 的《LLM as a Knowledge Base》作为系统思想来源。
+
+---
+
+## Situation
+
+最初认为当前 Domain 目录结构可能直接来自 Karpathy 的设计。
+
+重新阅读原文后确认：
+
+Karpathy 提供的是 LLM Wiki 的整体 Pattern（Raw Sources、Wiki、Schema、Index、Log、Operations），并明确指出具体目录结构和实现方式应根据实际需求与领域共同演化，而不是固定规范。
+
+当前 LLM Wiki OS 的 Domain Architecture 是在 Karpathy 思想基础上，经过 S01–S09 多轮迭代逐步形成的工程实现。
+
+---
+
+## Evidence
+
+- Karpathy 文档明确说明其目标是提供 Pattern，而不是具体 Implementation。
+- 当前 Domain 中的目录组织（schema、index、log、raw、wiki、sources）并未直接出现在 Karpathy 的实现规范中。
+- AI Domain 与 KM Domain 已经表现出较高的一致性，但这些一致性来源于持续迭代，而非直接复制原始文章。
+
+---
+
+## Signal
+
+Domain Template 不应直接从当前目录结构抽象。
+
+真正需要验证的是：
+
+每一个 Design Decision 为什么被引入、解决了什么问题、是否已经经过实践验证。
+
+只有经过验证的 Design Decisions 才适合沉淀为可复用的 Domain Template。
+
+---
+
+## Alternative Explanation
+
+另一种可能是：
+
+直接将当前实现视为最终模板，然后继续复制到新的 Domain。
+
+这种方式虽然成本较低，但容易把历史实现细节误认为通用设计原则，缺乏设计依据，也难以解释每一个组成部分存在的原因。
+
+---
+
+## Impact
+
+Review 的重点发生变化：
+
+从：
+
+> Review Directory Structure
+
+转变为：
+
+> Review Design Decisions
+
+未来 Domain Template 将从已经验证的 Design Decisions 中自然抽象，而不是直接复制当前实现。
+
+这种方法同样可以推广到 Protocol、Template、Command 等其它系统模块的标准化工作。
+
+---
+
+## Decision
+
+- Continue Observation
+
+下一阶段进入：
+
+**Domain Design Decision Review**
+
+逐项验证每一个设计决策：
+
+- 为什么引入？
+- 解决了什么问题？
+- 今天是否仍然成立？
+- 是否已经稳定到足以进入 Domain Template？
+
+
 # 8. Future Observation Template
 
 ## Observation XX — Title
@@ -506,37 +872,51 @@ Status:
 
 Observed / Confirmed / Rejected
 
+---
+
 ## Context
 
 发生背景：
+
+---
 
 ## Situation
 
 实际发生：
 
+---
+
+## Evidence
+
+目前证据：
+
+---
+
 ## Signal
 
 观察到：
+
+---
 
 ## Alternative Explanation
 
 可能解释：
 
+---
+
 ## Impact
 
 影响：
+
+---
 
 ## Decision
 
 选择：
 
 - Continue Observation
-    
 - Modify Workflow
-    
 - Consider Evolution
-    
-
 ---
 
 # 9. Periodic Review
