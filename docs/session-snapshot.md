@@ -352,7 +352,9 @@ Architecture Freeze 生效。当前处于 S09 Post-Freeze Observation Period。�
 - S09 Foundational Review: Karpathy LLM Wiki 基础来源回溯分析完成。报告：`reports/S09-foundational-review-karpathy.md`
 - S09 Observation Log: 观察日志已建立。`reports/S09-observation-log.md`
 - Vocational Education Domain Bootstrap (2026-07-30): 新 Domain 已激活。2 bootstrap seed concepts (industry-education integration, teaching key elements) + 1 policy reference。Domain schema、index、log 已创建。FEDERATION、document-map、protocol/domain-routing 已同步。Domain 处于 Bootstrap Complete, Observation 状态。
-- /capture Command V1 + V2 (2026-07-31): 新命令 `/capture` 已创建并增强。职责：`capture/attachments/` 本地文件 → Raw Markdown Capture。已验证：PDF (PyPDF2)、DOCX (python-docx + Pillow 图片提取)。支持可选文件参数和自动发现未捕获文件。两张真实 policy capture 已通过此工作流创建：教育强国建设规划纲要 PDF + 教育发展十五五规划 DOCX（含 15 张政策框架图提取）。
+- /capture Command V1 + V2 (2026-07-31): 新命令 `/capture` 已创建并增强。职责：`capture/attachments/` 本地文件 → Raw Markdown Capture。已验证：PDF (PyPDF2)、DOCX (python-docx + Pillow 图片提取 + macOS Vision OCR，zh-Hans+zh-Hant+en，置信度 0.50-1.00)。OCR 内容按原始 DOCX 段落位置交叉插入 Raw Content，`## Extracted Visuals` 为简洁索引。支持可选文件参数和自动发现未捕获文件。两张真实 policy capture 已通过此工作流创建：教育强国建设规划纲要 PDF + 教育发展十五五规划 DOCX（含 15 张政策框架图，OCR 文字已位置保留）。
+- /ingest — 教育发展十五五规划 (2026-07-31): DOCX Capture 经 `/ingest` 路由至 Vocational Education Domain（reference）。创建 `wiki/references/2026-education-fifteen-five-plan.md`。三层政策链完整闭合：纲要（顶层）→ 十五五规划（中期）→ 教学关键要素改革（实施）。Zettelkasten Capture 状态回溯修复（raw→processed）。Inbox 全部 7 个 capture 均为 processed。
+- /lint — 2026-07-31: 全系统质量检查。29 页面，3 域。0 真实错误，0 断链，0 孤立节点。1 个真实警告（KM Domain Type C planned link 注释缺失——既有问题，非本轮引入）。报告：`reports/lint-2026-07-31.md`。
 
 **当前约束**：
 - 禁止创建新 Layer、Module、Protocol、Architecture

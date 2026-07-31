@@ -1,6 +1,6 @@
 ---
 created: 2026-07-30
-updated: 2026-07-30
+updated: 2026-07-31
 domain: vocational-education
 type: reference
 reference_type: policy-document
@@ -70,4 +70,5 @@ ingested_by: claude-opus-4.7
 
 - [[../concepts/industry-education-integration|产教融合]] — 纲要第 20 条将产教融合确立为职业教育体系的核心形态
 - [[../concepts/teaching-key-elements|教学关键要素]] — 纲要第 22 条为教学关键要素改革的顶层政策依据
+- [[wiki/references/2026-education-fifteen-five-plan|教育发展"十五五"规划（2026—2030）]] — 本纲要的首个五年实施规划，含 23 条目 + 15 专栏（定量指标）
 - [[wiki/references/2026-vocational-education-teaching-reform-policy|职业教育教学关键要素改革（2026）]] — 本纲要的下位实施文件，教职成〔2026〕1 号

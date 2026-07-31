@@ -8,7 +8,11 @@ tags:
   - note-taking
   - luhmann
   - knowledge-organization
-status: raw
+status: processed
+processed_date: 2026-07-12
+ingested_to:
+  - "[[spaces/knowledge-management/wiki/concepts/zettelkasten-method]]"
+agent_version: claude-opus-4.7
 ---
 
 # Zettelkasten Method

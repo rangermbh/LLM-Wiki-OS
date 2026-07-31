@@ -195,19 +195,21 @@ KM Domain 已激活，Principle → Method → Result 推导链已建立。
 
 **拓扑**：`Note Atomicity (Principle) → Zettelkasten Method (Method) → Emergent Organization (Result) → MOC (Curation)`
 
-### Vocational Education Domain（Bootstrap · 2 concepts · 1 reference）
+### Vocational Education Domain（Bootstrap Complete · 2 concepts · 3 references）
 
-Vocational Education Domain 于 2026-07-25 引导创建，首个页面为奠基性政策参考文献。两个 Bootstrap Seed Concepts 由领域研究者确认创建。
+Vocational Education Domain 于 2026-07-25 引导创建。两个 Bootstrap Seed Concepts 由领域研究者确认创建。三个 Reference 构成完整政策层级链。
 
 | 页面 | 类型 | 说明 |
 |------|------|------|
 | [[spaces/vocational-education/wiki/concepts/industry-education-integration\|产教融合]] | Concept (Seed) | 产业与教育系统深度耦合的核心机制概念，以产定教、以产引教、以产改教、以产促教 |
 | [[spaces/vocational-education/wiki/concepts/teaching-key-elements\|教学关键要素]] | Concept (Seed) | 五要素联动系统：专业→课程→教材→教师→实习实训的传递链与闭环 |
+| [[spaces/vocational-education/wiki/references/2025-education-powerhouse-plan\|教育强国建设规划纲要（2024—2035年）]] | Reference | 中共中央、国务院印发：面向 2035 年的国家教育顶层设计，八大体系建设目标 |
+| [[spaces/vocational-education/wiki/references/2026-education-fifteen-five-plan\|教育发展"十五五"规划（2026—2030）]] | Reference | 教育部：首个五年实施规划，23 条目 + 15 专栏（定量建设计划） |
 | [[spaces/vocational-education/wiki/references/2026-vocational-education-teaching-reform-policy\|职业教育教学关键要素改革（2026）]] | Reference | 教育部教职成〔2026〕1号：教学关键要素改革框架 |
 
-**拓扑**：`产教融合 ⇄ 教学关键要素`，两者均引用 `改革政策（2026）` 作为来源之一。
+**拓扑**：`产教融合 ⇄ 教学关键要素`。政策层级链：`教育强国纲要（顶层）→ 十五五规划（中期）→ 教学关键要素改革（实施）`。
 
-**状态**：Bootstrap — 2 seed concepts (growing) + 1 reference，methods/technologies/entities 目录待填充。
+**状态**：Bootstrap Complete — 2 seed concepts (growing) + 3 references (seedling)，methods/technologies/entities 目录待填充。Observation。
 
 每条领域自包含：有自己的 schema、index、log 和 5 种知识类型的 wiki 子目录。
 

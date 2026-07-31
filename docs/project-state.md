@@ -151,7 +151,9 @@ These decisions are settled. Do not reopen without explicit human request.
 | S09 Observation Log | Post-Freeze Observation Period established. Observation log created: `reports/S09-observation-log.md`. Architecture Freeze in effect. |
 | Vocational Education Domain Bootstrap | New domain activated: `spaces/vocational-education/`. 2 bootstrap seed concepts (industry-education integration, teaching key elements) + 1 policy reference. Domain schema, index, and log created. FEDERATION, document-map, protocol/domain-routing synchronized. |
 | /capture Command V1 | New command created: `/capture` — Prepare Local Attachment as Raw Capture. Bridges `capture/attachments/` → `capture/inbox/`. Verified: PDF (PyPDF2) + DOCX (python-docx). Two real captures processed: 《教育强国建设规划纲要》PDF and 《教育发展十五五规划》DOCX. |
-| /capture V2 Enhancement | Image extraction (DOCX → PNG via python-docx + Pillow), image classification (DIAGRAM/CHART/PHOTO), auto-discovery of un-captured files, optional file argument. 15 policy framework images extracted and catalogued from 十五五规划 DOCX. |
+| /capture V2 Enhancement | Image extraction (DOCX → PNG via python-docx + Pillow), macOS Vision OCR (zh-Hans+zh-Hant+en, confidence 0.50-1.00), OCR text written to Capture and interleaved into Raw Content at original DOCX paragraph positions, `## Extracted Visuals` as concise visual index, optional file argument (`/capture <filename>`), auto-discovery of un-captured attachments. 15 policy framework images (专栏) with quantitative planning indicators extracted, OCR'd, and position-preserved from 十五五规划 DOCX. |
+| /ingest — 十五五规划 | Routed "教育发展十五五规划" → `spaces/vocational-education/wiki/references/2026-education-fifteen-five-plan.md`. Mid-term action plan (2026-2030) bridging 纲要 and 教学改革. Three-tier policy chain complete. Zettelkasten capture status fix (raw→processed, retroactive). |
+| /lint — 2026-07-31 | Full system lint: 29 pages, 3 domains. 0 true errors, 1 true warning (pre-existing KM Type C planned link annotation). AI/KM/VE domains: 0 broken links, 0 orphans. Report: `reports/lint-2026-07-31.md`. |
 
 ### Not Yet Started
 
@@ -200,9 +202,11 @@ Phase 演进：
 | `7055ead` | update: relocate Karpathy LLM Wiki to foundation directory |
 | `fd05c77` | docs: transition to S09 post-freeze observation period |
 | `2860b8b` | update: bootstrap vocational-education domain with seed concepts and policy capture |
+| `337700a` | maintenance: sync project-state and session-snapshot after vocational-education domain bootstrap |
+| `8f4d308` | feat(capture): preserve visual content in original document order |
 
 Branch: `master`. Remote: `origin` (GitHub). Mirror: Gitee (manual pull).
-Last synchronized: 2026-07-30
+Last synchronized: 2026-07-31
 
 ---
 
