@@ -1,6 +1,6 @@
 ---
 created: 2026-07-25
-updated: 2026-07-25
+updated: 2026-07-30
 ---
 
 # Vocational Education Domain Index
@@ -20,6 +20,7 @@ updated: 2026-07-25
 
 ## References
 
+- [[wiki/references/2025-education-powerhouse-plan|教育强国建设规划纲要（2024—2035年）]] — 中共中央、国务院印发：面向 2035 年的国家教育顶层设计文件，"产教融合的职业教育体系"为八大体系建设目标之一，是域内所有职业教育政策的顶层来源。
 - [[wiki/references/2026-vocational-education-teaching-reform-policy|职业教育教学关键要素改革（2026）]] — 教育部教职成〔2026〕1号：首个系统性教学关键要素改革政策文件，定义五要素联动框架与产教融合实施机制。
 
 ## Entities

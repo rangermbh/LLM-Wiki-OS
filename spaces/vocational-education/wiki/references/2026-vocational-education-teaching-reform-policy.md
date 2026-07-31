@@ -1,6 +1,6 @@
 ---
 created: 2026-07-25
-updated: 2026-07-25
+updated: 2026-07-30
 domain: vocational-education
 type: reference
 reference_type: policy-document
@@ -29,7 +29,7 @@ ingested_by: claude-opus-4.7
 
 ## Summary
 
-这是《教育强国建设规划纲要（2024—2035年）》发布后，教育部关于职业教育教学改革的首个系统性政策文件。文件以"教学关键要素"（专业、课程、教材、教师、实习实训）为改革核心，提出从单一知识传授向综合能力培养转变的底层逻辑重构，并以产教融合（industry-education integration）作为贯穿五项改革的主线机制。文件设定两步目标：到 2027 年建成先进标准体系与可推广范式，到 2035 年形成中国特色职业教育实践模式。
+这是[[2025-education-powerhouse-plan|《教育强国建设规划纲要（2024—2035年）》]]发布后，教育部关于职业教育教学改革的首个系统性政策文件。文件以"教学关键要素"（专业、课程、教材、教师、实习实训）为改革核心，提出从单一知识传授向综合能力培养转变的底层逻辑重构，并以产教融合（industry-education integration）作为贯穿五项改革的主线机制。文件设定两步目标：到 2027 年建成先进标准体系与可推广范式，到 2035 年形成中国特色职业教育实践模式。
 
 ## Key Insights
 
@@ -49,6 +49,7 @@ This is the foundational policy document for China's vocational education reform
 
 ## Related Concepts
 
+- [[2025-education-powerhouse-plan|教育强国建设规划纲要（2024—2035年）]] — 本文件的上位政策依据，纲要第 22 条为本文件的直接政策来源
 - [[../concepts/industry-education-integration|产教融合]] — 作为五项改革的贯穿机制，本政策文件是其最新系统性实施方案
 - [[../concepts/teaching-key-elements|教学关键要素]] — 本政策文件是五要素联动改革的核心政策来源，定义了每个要素在当前阶段的改革机制和目标
 

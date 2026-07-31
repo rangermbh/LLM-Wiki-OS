@@ -1,6 +1,6 @@
 ---
 created: 2026-07-12
-updated: 2026-07-30
+updated: 2026-07-31
 status: active
 ---
 
@@ -352,6 +352,7 @@ Architecture Freeze 生效。当前处于 S09 Post-Freeze Observation Period。�
 - S09 Foundational Review: Karpathy LLM Wiki 基础来源回溯分析完成。报告：`reports/S09-foundational-review-karpathy.md`
 - S09 Observation Log: 观察日志已建立。`reports/S09-observation-log.md`
 - Vocational Education Domain Bootstrap (2026-07-30): 新 Domain 已激活。2 bootstrap seed concepts (industry-education integration, teaching key elements) + 1 policy reference。Domain schema、index、log 已创建。FEDERATION、document-map、protocol/domain-routing 已同步。Domain 处于 Bootstrap Complete, Observation 状态。
+- /capture Command V1 + V2 (2026-07-31): 新命令 `/capture` 已创建并增强。职责：`capture/attachments/` 本地文件 → Raw Markdown Capture。已验证：PDF (PyPDF2)、DOCX (python-docx + Pillow 图片提取)。支持可选文件参数和自动发现未捕获文件。两张真实 policy capture 已通过此工作流创建：教育强国建设规划纲要 PDF + 教育发展十五五规划 DOCX（含 15 张政策框架图提取）。
 
 **当前约束**：
 - 禁止创建新 Layer、Module、Protocol、Architecture

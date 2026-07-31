@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11
-updated: 2026-07-30
+updated: 2026-07-31
 status: active
 ---
 
@@ -124,7 +124,7 @@ These decisions are settled. Do not reopen without explicit human request.
 | FEDERATION.md | Members, governance, authority model |
 | Protocol docs | 6 documents (federation, git convention, metadata schema, domain routing, knowledge lifecycle, knowledge distillation) |
 | Templates | 10 templates (1 raw + 5 domain + 4 master) |
-| Commands | 5 commands (ingest, update, lint, promote, reflect) |
+| Commands | 6 commands (ingest, update, lint, promote, reflect, capture) |
 | Domains | 3 domains (AI, Knowledge Management, Vocational Education) |
 | Master Wiki | 4 categories, schema, index, 2 concepts (activated) |
 | Obsidian integration | Vault configured, 14 core plugins enabled, wikilinks, frontmatter |
@@ -150,6 +150,8 @@ These decisions are settled. Do not reopen without explicit human request.
 | S09 Foundational Review | Karpathy LLM Wiki foundational source analysis. Observation report: `reports/S09-foundational-review-karpathy.md`. System relationship defined: seed pattern → emergent paradigm. |
 | S09 Observation Log | Post-Freeze Observation Period established. Observation log created: `reports/S09-observation-log.md`. Architecture Freeze in effect. |
 | Vocational Education Domain Bootstrap | New domain activated: `spaces/vocational-education/`. 2 bootstrap seed concepts (industry-education integration, teaching key elements) + 1 policy reference. Domain schema, index, and log created. FEDERATION, document-map, protocol/domain-routing synchronized. |
+| /capture Command V1 | New command created: `/capture` — Prepare Local Attachment as Raw Capture. Bridges `capture/attachments/` → `capture/inbox/`. Verified: PDF (PyPDF2) + DOCX (python-docx). Two real captures processed: 《教育强国建设规划纲要》PDF and 《教育发展十五五规划》DOCX. |
+| /capture V2 Enhancement | Image extraction (DOCX → PNG via python-docx + Pillow), image classification (DIAGRAM/CHART/PHOTO), auto-discovery of un-captured files, optional file argument. 15 policy framework images extracted and catalogued from 十五五规划 DOCX. |
 
 ### Not Yet Started
 
