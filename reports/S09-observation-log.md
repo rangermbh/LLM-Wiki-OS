@@ -858,7 +858,149 @@ Review 的重点发生变化：
 - 解决了什么问题？
 - 今天是否仍然成立？
 - 是否已经稳定到足以进入 Domain Template？
+---
 
+# Observation 07 — /capture V2 多模态完整性与原文位置保留验证
+
+Date:
+
+2026-07-31
+
+Status:
+
+Confirmed
+
+---
+
+## Context
+
+在职业教育领域使用《教育发展十五五规划》DOCX 进行真实 Capture → /ingest → /lint 测试。
+
+初始 `/capture V2` 已能够提取 DOCX 正文、导出内嵌图片并进行分类，但图片中的文字和框架信息尚未进入 Capture Markdown。
+
+同时，图片内容最初集中存放在 `## Extracted Visuals`，没有按照原始 DOCX 中的插入位置进入 `## Raw Content`。
+
+---
+
+## Situation
+
+本轮真实测试和修正后，`/capture V2` 完成了以下能力验证：
+
+- 支持 `/capture <filename>`：指定文件时仅处理指定附件；
+- 支持无参数 `/capture`：自动发现尚未 Capture 的附件，并跳过已 Capture 文件；
+- 能提取 DOCX 正文、内嵌图片和表格；
+- 使用 macOS Vision OCR 识别图片中的文字、标签和定量指标；
+- 将图片 OCR 内容按照原始 DOCX 段落顺序插入 `## Raw Content`；
+- 保留 `## Extracted Visuals` 作为图片文件、分类和位置的索引；
+- 原始 DOCX 保持不被修改，派生图片和 OCR 数据保存于独立目录；
+- 《教育发展十五五规划》完成 `/ingest`，进入 Vocational Education Domain；
+- `/lint` 验证通过，未发现本轮引入的真实错误。
+
+---
+
+## Evidence
+
+真实 DOCX 验证结果：
+
+- 原文正文：142 个段落完整提取；
+- 内嵌图片：15/15 张成功导出；
+- 图片 OCR：15/15 张图片中的文字进入 Capture Markdown；
+- 图片位置：15/15 按原始 DOCX 段落顺序插入；
+- 原始文本：未被 OCR 内容覆盖；
+- OCR 内容：仅在 `## Raw Content` 中保留一次；
+- 原始 DOCX：未被移动、删除或修改；
+- `/ingest`：成功生成 Vocational Education Domain 的政策 Reference；
+- `/lint`：0 个本轮真实错误，VE Domain 无断链、无孤立节点。
+
+---
+
+## Signal
+
+本轮验证表明，Capture 的完整性不能只按“正文文本是否提取”判断。
+
+对于包含框架图、流程图、指标图和其他非装饰视觉内容的文档：
+
+1. 图片文件被导出，不等于图片知识已进入系统；
+2. OCR 文字被提取，不等于视觉内容与原文结构保持一致；
+3. 视觉内容的位置会影响后续 `/ingest` 对上下文和知识关系的理解；
+4. 将 OCR 内容放回原始文档位置，比集中放在文末索引更有利于知识蒸馏。
+
+因此，Capture 的可靠性至少需要同时考虑：
+
+- 文本完整性；
+- 非装饰视觉内容提取；
+- 视觉内容的语义转换；
+- 原文顺序和上下文位置保留；
+- 原始附件可追溯性。
+
+---
+
+## Alternative Explanation
+
+本次政策文件中的图片主要是文字和指标的框架化呈现，OCR 已能够提取主要知识内容。
+
+因此，当前结果不能证明 `/capture V2` 已能够完整理解所有视觉结构。
+
+仍未被可靠提取的内容包括：
+
+- 框图节点之间的箭头关系；
+- 层级布局；
+- 颜色编码；
+- 非文字图形的语义；
+- 图片之间的跨图逻辑关系。
+
+当前验证证明的是：
+
+> `/capture V2` 已实现图片文字内容提取和原文位置保留。
+
+尚未证明：
+
+> `/capture V2` 已实现通用视觉结构理解。
+
+---
+
+## Impact
+
+正面影响：
+
+- Capture 从“文本提取”扩展为“文本与非装饰视觉内容的综合提取”；
+- 图片中的文字、标签和指标可以进入后续 `/ingest` 流程；
+- 原文位置保留减少了视觉信息脱离上下文造成的知识损失；
+- 原始附件、派生图片和 OCR 结果形成可追溯链；
+- `/capture` 的可选参数和自动发现机制降低了日常使用成本。
+
+仍需持续观察：
+
+- OCR 在扫描件、低清晰度图片、复杂表格和多栏布局中的可靠性；
+- PDF 内嵌图片与扫描型 PDF 的实际表现；
+- 纯图片文件作为输入时的 Capture 行为；
+- 视觉结构缺失是否会在真实 `/ingest` 中造成知识损失；
+- Capture 内容增加后，是否会导致 Reference 页面出现冗余或信息过载。
+
+---
+
+## Decision
+
+选择：
+
+- Continue Observation
+
+当前不继续扩展视觉结构理解能力，也不立即修改 Capture 架构。
+
+后续通过真实文档继续观察：
+
+1. OCR 内容是否实际改善 `/ingest` 结果；
+2. 原文位置保留是否提升 Reference 的上下文质量；
+3. 视觉结构缺失是否形成重复出现的价值损失；
+4. `/capture V2` 是否在不同文件类型中保持稳定。
+
+---
+
+## Related Observation
+
+- Observation 06：Vocational Education Domain 的真实政策摄入与 Bootstrap 验证
+- 本观察涉及：`/capture V2`、多模态 Capture、OCR、视觉内容位置保留、Capture → /ingest → /lint 测试链路
+----
 
 # 8. Future Observation Template
 
