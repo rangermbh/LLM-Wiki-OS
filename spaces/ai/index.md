@@ -36,7 +36,7 @@ updated: 2026-07-11T23:50
 
 <!-- Papers, articles, books. See wiki/references/ -->
 
-*No entries yet.*
+- [[wiki/references/luo-phd-research-methodology|博士生科研入门辅导（骆昱宇）]] — HKUST(GZ) 科研方法论讲义：论文生产流水线、新问题vs老问题二分法、What-Why-How-So What 论文叙事框架。AI Domain 首个 Reference 页面。
 
 ## Entities
 
