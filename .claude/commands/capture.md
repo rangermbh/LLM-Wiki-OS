@@ -107,6 +107,121 @@ For each embedded image/drawing found in the document:
 
 **PDF images**: PyPDF2 does not extract embedded images. Note image count (if detectable) in `extraction_notes`. This is a known limitation.
 
+#### 2d. Page-level OCR for PDF (fallback)
+
+When the PDF text layer is sparse (slide-deck PDF, PPT-exported PDF), supplement with page-level OCR to recover text embedded in page images. This is a **supplement only** — never replace PyPDF2-extracted text.
+
+**Trigger condition**:
+
+Calculate after §2a text extraction:
+
+```
+avg_chars_per_page = total_chars / total_pages
+sparse_pages = [p for p where page_chars(p) < OCR_SPARSE_THRESHOLD]
+sparse_ratio = len(sparse_pages) / total_pages
+
+OCR_TRIGGER = avg_chars_per_page < 200 AND sparse_ratio > 0.20
+```
+
+- `OCR_DENSITY_THRESHOLD = 200` (chars/page average)
+- `OCR_SPARSE_THRESHOLD = 100` (per-page char count)
+- If trigger condition is NOT met: skip OCR entirely, proceed to Step 3. Text-rich PDFs (papers, reports) do not need OCR.
+- If trigger condition IS met: proceed with OCR on sparse pages only.
+- **Do not use CJK ratio as a trigger condition.** English slide-deck PDFs have the same image-text problem.
+
+**OCR language selection** (based on CJK ratio, not on trigger):
+
+```
+if cjk_ratio > 0.15:
+    ocr_languages = ["zh-Hans", "zh-Hant", "en"]
+else:
+    ocr_languages = ["en"]
+```
+
+**Page limit**: For PDFs > 100 pages, OCR at most 50 pages (first 50 sparse pages). Record `ocr_truncated: true` if the limit is hit.
+
+**Implementation** (macOS only):
+
+For each sparse page:
+
+1. **Render page to image** via macOS Quartz/CoreGraphics:
+   - Open PDF with `CGPDFDocumentCreateWithURL`
+   - Get page with `CGPDFDocumentGetPage(doc, page_num)`
+   - Get page rect with `CGPDFPageGetBoxRect(page, kCGPDFMediaBox)`
+   - Create bitmap context: `CGBitmapContextCreate` (RGB, 8bpc, scale=2.0)
+   - Draw page: `CGContextDrawPDFPage(ctx, page)`
+   - Get rendered image: `CGBitmapContextCreateImage(ctx)`
+   - Save to temporary PNG file (`/tmp/pdf_ocr_p{N}.png`)
+
+2. **Run OCR** via macOS Vision framework:
+   - Load rendered image: `CGImageSourceCreateWithURL` → `CGImageSourceCreateImageAtIndex`
+   - Create handler: `VNImageRequestHandler.initWithCGImage_options_`
+   - Create request: `VNRecognizeTextRequest` with `recognitionLevel = Accurate`, languages from CJK ratio selection
+   - Execute: `handler.performRequests_error_`
+   - Sort results by `boundingBox.origin.y` descending (top-to-bottom reading order)
+   - Calculate per-page average confidence
+
+3. **Clean up**: Remove temporary PNG file after OCR.
+
+**Non-macOS fallback**: If Quartz/CoreGraphics or Vision framework is unavailable, record `ocr_available: false` in extraction_notes. Continue without OCR. Do NOT fail the capture.
+
+**OCR text handling — Tiered by confidence**:
+
+For each OCR'd page, based on per-page average confidence:
+
+| Tier | Confidence | Action |
+|------|-----------|--------|
+| Tier 1 | ≥ 50% | Enter Raw Content under `**OCR**:` section. Record actual confidence in `<!-- ocr:page=N -->` comment. |
+| Tier 2 | 30% – 50% | Enter Raw Content under `**OCR** ⚠️:` (with warning marker). Record confidence. Note in extraction_notes as `ocr_low_confidence_pages`. |
+| Tier 3 | < 30% | **Do NOT enter Raw Content.** Record page number in extraction_notes as `ocr_excluded_pages: [N, ...]` with reason "confidence < 30%". |
+
+**Output format — Supplement only, never replace**:
+
+For each page, output both layers when OCR was performed:
+
+```markdown
+### Slide N
+
+**Text**: {PyPDF2 extracted text, or "*(无文字层)*" if empty}
+
+<!-- ocr:page=N confidence=0.XX blocks=M -->
+**OCR**: {OCR text, sorted top-to-bottom, one line per observation}
+
+{OCR text lines...}
+```
+
+When OCR was NOT performed for this page (text-rich or not sparse), output only the PyPDF2 text as before:
+
+```markdown
+### Slide N
+
+{PyPDF2 extracted text}
+```
+
+Key rules:
+- **Never replace** PyPDF2 text with OCR text — provenance must be preserved.
+- Always include `<!-- ocr:page=N confidence=0.XX blocks=M -->` comment for OCR'd pages.
+- The comment is an HTML comment — invisible in Obsidian reading mode, searchable in raw markdown.
+- OCR text is the **OCR Layer** (visual inference); PyPDF2 text is the **Text Layer** (ground truth).
+
+**Record OCR metadata in extraction_notes**:
+
+After OCR completes, append to `extraction_notes`:
+
+```
+OCR triggered: true. OCR engine: macOS Vision. OCR pages: N. OCR avg confidence: X.X%. OCR chars added: N. OCR languages: [zh-Hans,zh-Hant,en]. [OCR low confidence pages: [N,M].] [OCR excluded pages (<30%): [N,M].] [OCR truncated: true — limit 50 pages.]
+```
+
+**Error handling**:
+
+| Scenario | Handling |
+|----------|----------|
+| Non-macOS environment | Skip OCR, record `ocr_available: false`, continue capture |
+| Quartz rendering fails for a page | Skip that page, record `ocr_page_{N}_render_failed`, continue with other pages |
+| Vision OCR returns empty for a page | Keep PyPDF2 text only, mark page as `ocr_empty: true` |
+| Vision OCR throws exception | Skip that page, record error, continue |
+| All OCR pages fail | Continue capture with PyPDF2 text only — do NOT fail the capture |
+
 ### Step 3: Assess extraction quality
 
 Evaluate the extracted content:
@@ -204,6 +319,7 @@ Output:
 | DOCX | Paragraph text | Verified | python-docx; 142-paragraph document |
 | DOCX | Image extraction | Verified | 15 images extracted, classified (Pillow), and OCR'd (macOS Vision); text content extracted at 0.50-1.00 confidence |
 | Standalone images | OCR text extraction | Verified | macOS Vision framework; supports .png, .jpg via CGImageSource |
+| PDF (sparse text) | Page-level OCR fallback | Verified | Quartz page render (2x) + macOS Vision OCR; triggered when avg < 200 chars/page and > 20% sparse pages; supplement-only (never replace PyPDF2 text); 3-tier confidence handling; 70-slide PPT-PDF: 43 pages OCR'd, 12,847 chars added at 65.9% avg confidence |
 | DOCX | Table extraction | Code-ready | API verified (0 tables in test doc); Markdown table conversion ready |
 | Auto-discovery | Un-captured file detection | Verified | Checks `source` field in inbox frontmatter |
 
@@ -211,8 +327,11 @@ Output:
 
 | Limitation | Impact |
 |------------|--------|
-| Scanned/image PDF | Cannot extract; will report failure |
-| PDF embedded images | Not extracted by PyPDF2 |
+| Scanned/image PDF | No text layer; will report failure (OCR fallback may recover some text from sparse slide-deck PDFs, but fully scanned/image-only PDFs without any extractable text still fail) |
+| PDF embedded images | Not extracted individually by PyPDF2; page-level OCR fallback recovers image text on sparse pages via Quartz rendering + Vision OCR (macOS only) |
+| PDF page OCR — macOS dependency | Quartz + Vision OCR only available on macOS; non-macOS environments skip OCR fallback and proceed with PyPDF2 text only |
+| PDF page OCR — confidence | OCR text < 30% confidence excluded from Raw Content to prevent downstream knowledge contamination |
+| PDF page OCR — large files | Max 50 pages OCR'd for PDFs > 100 pages to bound processing time |
 | PDF tables | Not reconstructed; noted in extraction_notes |
 | DOCX images — OCR via macOS Vision | Text extracted (zh-Hans+zh-Hant+en); visual structure (arrows, layout, color coding) not captured |
 | DOCX heading styles | May be lost; hierarchy inferred from text patterns |
